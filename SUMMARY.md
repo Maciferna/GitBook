@@ -44,6 +44,7 @@
   * [R00tless](writeups/dockerlabs/R00tless.md)
   * [Showtime](writeups/dockerlabs/Showtime.md)
   * [Sites](writeups/dockerlabs/Sites.md)
+  * [Stack](writeups/dockerlabs/Stack.md)
   * [Stellarjwt](writeups/dockerlabs/Stellarjwt.md)
   * [Stranger](writeups/dockerlabs/Stranger.md)
   * [UserSearch](writeups/dockerlabs/UserSearch.md)
