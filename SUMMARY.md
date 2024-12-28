@@ -41,6 +41,7 @@
   * [Pntopntobarra](writeups/dockerlabs/Pntopntobarra.md)
   * [Pressenter](writeups/dockerlabs/Pressenter.md)
   * [Report](writeups/dockerlabs/Report.md)
+  * [Reverse](writeups/dockerlabs/Reverse.md)
   * [Rubiks](writeups/dockerlabs/Rubiks.md)
   * [R00tless](writeups/dockerlabs/R00tless.md)
   * [Showtime](writeups/dockerlabs/Showtime.md)
