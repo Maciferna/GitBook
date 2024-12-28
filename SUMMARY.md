@@ -17,6 +17,7 @@
   * [Candy](writeups/dockerlabs/Candy.md)
   * [Chmod-4755](writeups/dockerlabs/Chmod-4755.md)
   * [Corruptress](writeups/dockerlabs/Corruptress.md)
+  * [Cracker](writeups/dockerlabs/Cracker.md)
   * [Crackoff](writeups/dockerlabs/Crackoff.md)
   * [Dance-Samba](writeups/dockerlabs/Dance-samba.md)
   * [Darkweb](writeups/dockerlabs/Darkweb.md)
