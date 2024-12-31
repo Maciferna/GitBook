@@ -4,7 +4,7 @@ Autor: [Yo](https://github.com/maciferna)
 
 Dificultad: Medio
 
-![Reverse](/reverse/img/reverse.png)
+![Reverse](images/reverse/imgimages/reverse.png)
 
 # Reconocimiento
 
@@ -37,7 +37,7 @@ Solo vemos un puerto abierto, que es el `80` y en el funciona `Apache httpd 2.4.
 
 ###### Pagina web
 
-![Web](/reverse/img/pagina.png)
+![Web](images/reverse/img/pagina.png)
 
 Si revisamos el código fuente de la página, veremos que hay un archivo javascript al cual la página apunta, este se encuentra en:
 
@@ -47,7 +47,7 @@ Si revisamos el código fuente de la página, veremos que hay un archivo javascr
 
 luego de revisar el script, veo que si hacemos 20 veces click en la web, nos aparecerá un mensaje que dice "secret_dir", por lo que luego de probar vemos lo siguiente:
 
-![Alerta](/reverse/img/alerta.png)
+![Alerta](images/reverse/img/alerta.png)
 
 viendo el mensaje, podemos intuir que existe una carpeta llamada "secret_dir" en el servidor.
 
@@ -57,7 +57,7 @@ Si ejecutamos `file secret` veremos que es un binario ejecutable y compilado de 
 
 Ahora veremos que hace dando permisos de ejecución sobre el y ejecutándolo con `./secret`:
 
-![Secret](/reverse/img/test-secret.png)
+![Secret](images/reverse/img/test-secret.png)
 
 vemos que el binario nos pide una contraseña, ademas, este no es vulnerable a un buffer overflow, por lo que podría tratar de ingeniería inversa. 
 
@@ -85,7 +85,7 @@ Una vez ghidra termine de hacer su trabajo analizando el binario (probablemente 
 
 si le damos doble click a la función "containsRequiredChars", nos llevará a lo siguiente:
 
-![Strings](/reverse/img/strings.png)
+![Strings](images/reverse/img/strings.png)
 
 Esta función lo que hace, es fijarse que lo que introduce el usuario cumpla con las siguientes características:
 
@@ -104,7 +104,7 @@ Mi@d00mS3cRet
 S3cRetMi@d00m
 ```
 
-![Pass](/reverse/img/pass-test.png)
+![Pass](images/reverse/img/pass-test.png)
 
 Como vemos ambas son correctas, al igual que toda contraseña que cumpla con las características solicitadas. Por lo que luego de poner cualquier contraseña correcta, vemos un mensaje en base64 que dice lo siguiente:
 
@@ -120,7 +120,7 @@ Al parecer tenemos un dominio con un subdominio, por lo que lo agregaremos al `/
 
 ###### Web del subdominio
 
-![Subdominio](/reverse/img/subdomain-web.png)
+![Subdominio](images/reverse/img/subdomain-web.png)
 
 Vemos que es una página hecha por chatgpt y revisando el código fuente vemos que hay una redirección a un archivo que contiene un posible LFI:
 
@@ -130,11 +130,11 @@ Vemos que es una página hecha por chatgpt y revisando el código fuente vemos q
 
 por lo que yendo ahí, cambiamos el "./modules/default.php" por "/etc/passwd" y veremos lo siguiente:
 
-![Passwd](/reverse/img/lfi-passwd.png)
+![Passwd](images/reverse/img/lfi-passwd.png)
 
 Viendo eso, podemos intentar un log poisoning, ya que poner los wrappers de php no nos da nada:
 
-![Logs](/reverse/img/lfi-log.png)
+![Logs](images/reverse/img/lfi-log.png)
 
 # Intrusión
 
@@ -268,7 +268,7 @@ Tenemos dos maneras de escalar (para saber ambas hay que leer el manual), pero l
 sudo clush -w node[11-14] -b
 ```
 
-![Root](/reverse/img/root.png)
+![Root](images/reverse/img/root.png)
 
 
 

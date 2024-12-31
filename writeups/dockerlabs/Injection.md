@@ -6,7 +6,7 @@ Dificultad: Muy Fácil
 
 Creador: [El Pingüino de Mario](https://www.youtube.com/channel/UCGLfzfKRUsV6BzkrF1kJGsg)
 
-![DockerLabs](../../../maquina-injection/imagenes/Injection.png)
+![DockerLabs](./images/injection/imagenes/Injection.png)
 
 ## INTRUSION
 
@@ -45,7 +45,7 @@ Vemos que solo esta abierto el puerto 22 y 80, sabiendo esto nos iremos directo 
 admin'or 1=1-- -
 ```
 
-Habiendo hecho esto logramos iniciar sesion y nos dan el siguiente mensaje: ![Acceso](../../../maquina-injection/imagenes/dylan.png)
+Habiendo hecho esto logramos iniciar sesion y nos dan el siguiente mensaje: ![Acceso](./images/injection/imagenes/dylan.png)
 
 Ahora continuaremos probando el usuario "dylan" con la contraseña "KJSDFG789FGSDF78". Ya estamos dentro.
 
@@ -59,6 +59,6 @@ Lo primero que hacemos es ejecutar `sudo -l` pero como no existe ejecutamos `fin
 
 y listo, somos ROOT.
 
-![root](../../../maquina-injection/imagenes/root.png)
+![root](./images/injection/imagenes/root.png)
 
 Gracias por leer.

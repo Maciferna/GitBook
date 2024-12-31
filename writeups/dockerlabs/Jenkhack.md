@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Fácil
 
-![jenk](../../../maquina-jenkhack/img/jen.png)
+![jenk](./images/jenkhack/img/jen.png)
 
 ## RECONOCIMIENTO
 
@@ -84,11 +84,11 @@ Como vemos está abierto el puerto `80, 443 y 8080`.
 
 Ahora continuaremos por el navegador al puerto 80:
 
-![80](../../../maquina-jenkhack/img/80.png)
+![80](./images/jenkhack/img/80.png)
 
 No tiene nada interesante por lo que continuaremos al 8080:
 
-![8080](../../../maquina-jenkhack/img/8080.png)
+![8080](./images/jenkhack/img/8080.png)
 
 Tenemos un jenkins.
 
@@ -145,7 +145,7 @@ jenkhack:C1V9uBl8!'Ci*`uDfP
 
 Como vemos la contraseña no está en un formato legible, por lo que iremos a [CyberChef](https://gchq.github.io/CyberChef/), y luego de probar, podemos pasarlo a texto con `base85`:
 
-![chef](../../../maquina-jenkhack/img/chef.png)
+![chef](./images/jenkhack/img/chef.png)
 
 Ahora escalamos poniendo `su jenkhack` y la contraseña.
 
@@ -177,6 +177,6 @@ nano /etc/passwd
 
 Esto nos dejará modificar el `/etc/passwd` cuando ejecutemos el script con sudo, y ya nos quedariá borrar la "x" de root y escalar con `su`
 
-![root](../../../maquina-jenkhack/img/root.png)
+![root](./images/jenkhack/img/root.png)
 
 Gracias por leer.

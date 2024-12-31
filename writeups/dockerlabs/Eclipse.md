@@ -4,7 +4,7 @@ Autor: [Xerosec](https://www.youtube.com/c/xerosec)
 
 Dificultad: Medio
 
-![Eclipse](/maquina-eclipse/img/eclipse.png)
+![Eclipse](./images/eclipse/img/eclipse.png)
 
 # Reconocimiento
 
@@ -51,7 +51,7 @@ Luego de revisar el puerto 80, no encuentro nada interesante, por lo que pasarem
 
 Puerto 8983:
 
-![Solr 8983](/maquina-eclipse/img/solr.png)
+![Solr 8983](./images/eclipse/img/solr.png)
 
 Como vemos tenemos un `solr 8.3.0`, la cual es vulnerable a un `RCE(Remote code execution)`.
 
@@ -109,7 +109,7 @@ Estando dentro, procedo a buscar binarios con el bit SUID activado:
 find / -perm -4000 2>/dev/null
 ```
 
-![SUID](/maquina-eclipse/img/suid.png)
+![SUID](./images/eclipse/img/suid.png)
 
 al parecer el binario `dosbox` tiene activado el SUID, y este nos permite modificar archivos del sistema, por lo que lo utilizaremos para modificar el sudoers. Para esto ejecutaremos lo siguiente
 
@@ -121,6 +121,6 @@ y listo, ya podremos ejecutar cualquier binario como root, por lo que para escal
 
 ### Root
 
-![Root](/maquina-eclipse/img/root.png)
+![Root](./images/eclipse/img/root.png)
 
 Gracias por leer :)

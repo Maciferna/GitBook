@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Medio
 
-![dock](../../maquina-dance-samba/imagenes/dock.png)
+![dock](./images/dance-samba/imagenes/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -168,6 +168,6 @@ root:rooteable2
 
 Como vemos, ya tenemos la contraseña de root, por lo que ponemos `su` y la contraseña y _ya seremos root_:
 
-![root](../../maquina-dance-samba/imagenes/root.png)
+![root](./images/dance-samba/imagenes/root.png)
 
 Gracias por leer...

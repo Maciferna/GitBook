@@ -6,7 +6,7 @@ Autor: [Luisillo\_o](https://www.youtube.com/@Luisillo_o)
 
 Dificultad: Fácil
 
-![dock](../../../maquina-candy/img/dock.png)
+![dock](./images/candy/img/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -45,7 +45,7 @@ Como vemos solo esta abierto el puerto 80 corriendo apache, por lo que podemos i
 
 **PUERTO 80:**
 
-![80](../../../maquina-candy/img/80.png)
+![80](./images/candy/img/80.png)
 
 Como vemos parece haber un `joomla`, por lo que podemos usar la herramienta `joomscan` de la siguiente manera:
 
@@ -246,6 +246,6 @@ echo "luisillo ALL=(ALL:ALL) ALL" | sudo dd of=$LFILE
 
 Una vez hecho esto ya tendremos permisos root para todos los comandos, y solo escalamos ejecutando `sudo su` y poniendo la contraseña de luisillo.
 
-![root](../../../maquina-candy/img/root.png)
+![root](./images/candy/img/root.png)
 
 Gracias por leer.

@@ -4,7 +4,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Difícil
 
-![DarkWeb](/maquina-darkweb/img/darkweb.png)
+![DarkWeb](./images/darkweb/img/darkweb.png)
 
 # Reconocimiento
 
@@ -123,9 +123,9 @@ en el que `redroom.html` nos da un usuario: dark
 
 y marketplace.html nos da un archivo llamado "passwordsListSecretWorld.txt" el cual parece tener contraseñas.
 
-![MarketPlace](/maquina-darkweb/img/marketplace.png)
+![MarketPlace](./images/darkweb/img/marketplace.png)
 
-![RedRoom](/maquina-darkweb/img/redroom.png)
+![RedRoom](./images/darkweb/img/redroom.png)
 
 # Intrusión
 
@@ -135,7 +135,7 @@ Para entrar a la maquina, crearemos una wordlist con el archivo de contraseñas 
 hydra -l dark -P wordlist ssh://172.17.0.2 -V
 ```
 
-![Pass](/maquina-darkweb/img/pass.png)
+![Pass](./images/darkweb/img/pass.png)
 
 Teniendo la contraseña, nos conectamos a través de ssh:
 
@@ -149,7 +149,7 @@ ssh dark@172.17.0.2
 
 Ya al entrar a la máquina, noto que `bash` está raro, y probablemente tenga el bit SUID activado, esto por que cuando entramos, no nos sale el típico prompt y nos sale `-bash-5.2$`:
 
-![Bash_SUID](/maquina-darkweb/img/bash.png)
+![Bash_SUID](./images/darkweb/img/bash.png)
 
 Luego de revisar el bash con `ls -l /bin/bash`, veo que efectivamente tiene el bit SUID activado, ya que entre sus permisos se encuentra una "s". Por lo que para escalar, ejecutaremos lo siguiente:
 
@@ -165,6 +165,6 @@ sed -i 's/root:x:/root::/g' /etc/passwd && su
 
 ## Root
 
-![Root](/maquina-darkweb/img/root.png)
+![Root](./images/darkweb/img/root.png)
 
 Gracias por leer :)

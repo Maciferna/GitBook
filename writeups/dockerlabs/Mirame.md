@@ -2,7 +2,7 @@
 
 Hoy maquina de [dockerlabs](https://dockerlabs.es)
 
-![dockerlabs](../../../maquina-mirame/imagenes/mirame.png)
+![dockerlabs](./images/mirame/imagenes/mirame.png)
 
 Autor:yo(maciiii\_\_\_)
 
@@ -48,7 +48,7 @@ Continuamos por el navegador y vemos esto:
 
 **PUERTO 80:**
 
-![puerto80](../../../maquina-mirame/imagenes/puerto80.png)
+![puerto80](./images/mirame/imagenes/puerto80.png)
 
 Al perecer es un panel de login, por lo que probaremos con las credenciales típicas: `admin:admin`
 
@@ -56,7 +56,7 @@ Al perecer es un panel de login, por lo que probaremos con las credenciales típ
 
 pero como ninguna funciona podemos pasar a probar poner una comilla `'` si nos da el error significa que estamos frente a SQLi. Al probar nos da el siguiente error:
 
-![error](../../../maquina-mirame/imagenes/error.png)
+![error](./images/mirame/imagenes/error.png)
 
 Sabiendo esto podriamos intentar nuevamente con el usuario admin pero poniendo `admin'or 1=1-- -` como usuario y de contraseña lo que sea. Una vez hecho veremos un panel que nos deja consultar el clima, pero al no tener nada interesante tendremos que usar sqlmap.
 
@@ -196,4 +196,4 @@ Como vemos, esta el binario `find`, si buscamos en [GTFObins](https://gtfobins.g
 
 Al usarlo escalamos a root.
 
-![root](../../../maquina-mirame/imagenes/root.png)
+![root](./images/mirame/imagenes/root.png)

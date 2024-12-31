@@ -6,7 +6,7 @@ Dificultad: Muy Fácil
 
 Autor: [BorazuwarahCTF](https://github.com/borazuwarah/)
 
-![Dock](../../../maquina-borazuwarahctf/imagenes/dock.png)
+![Dock](./images/borazuwarahctf/imagenes/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -109,6 +109,6 @@ Ejecutamos `sudo -l` para ver si podemos ejecutar algo como root, y vemos que el
 
 Y listo, _SOMOS ROOT_.
 
-![root](../../../maquina-borazuwarahctf/imagenes/roott.png)
+![root](./images/borazuwarahctf/imagenes/roott.png)
 
 Gracias por leer.

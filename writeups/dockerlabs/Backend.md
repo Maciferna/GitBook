@@ -6,7 +6,7 @@ Autor: [4bytes](https://github.com/4bytess/)
 
 Dificultad: Fácil
 
-![dock](../../../maquina-backend/img/dock.png)
+![dock](./images/backend/img/dock.png)
 
 ## INTRUSION
 
@@ -46,7 +46,7 @@ Como vemos está abierto el puerto 80 por el que esta siendo usado por apache y 
 
 **PUERTO 80:**
 
-![80](../../../maquina-backend/img/80.png)
+![80](./images/backend/img/80.png)
 
 Como vemos parece ser una página bajo mantenimiento pero vemos un login, pero luego de probar credenciales basicas como `admin:admin` o `root:root` y no conseguir nada, pruebo en poner una comilla para ver si trata de SQLi, pero como no nos muestra ningún error sino una página distinta, podriamos confirmar o descartar la idea usando sqlmap. Para hacerlo solo ejecutamos esto:
 
@@ -115,8 +115,8 @@ e43833c4c9d5ac444e16bb94715a75e4
 
 como vemos, parece ser un hash md5, por lo que lo podemos meter en [crackstation](https://crackstation.net/):
 
-![md5](../../../maquina-backend/img/md5.png)
+![md5](./images/backend/img/md5.png)
 
 Como vemos, parece ser que el hash tiene la contraseña `spongebob34`, ahora escalamos a root ejecutando `su root` y metiendo la contraseña:
 
-![root](../../../maquina-backend/img/root.png)
+![root](./images/backend/img/root.png)

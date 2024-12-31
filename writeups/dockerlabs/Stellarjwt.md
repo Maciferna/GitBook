@@ -6,7 +6,7 @@ Autor: [Alv-fh](https://github.com/Alv-fh)
 
 Dificultad: Fácil
 
-![dock](../../../maquina-Stellarjwt/img/dock.png)
+![dock](./images/Stellarjwt/img/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -52,7 +52,7 @@ Ninguna de estas versiones son vulnerables a nada útil, por lo que continuaremo
 
 **Puerto 80:**
 
-![80](../../../maquina-Stellarjwt/img/80.png)
+![80](./images/Stellarjwt/img/80.png)
 
 Al parecer tenemos una página relacionada con la nasa pero sin nada útil, por lo que procederemos a usar `gobuster` para ver si encontramos algo útil:
 
@@ -87,7 +87,7 @@ Finished
 
 Tenemos un directorio "universe" al cual si accedemos veremos simplemente una imágen. Si miramos el código fuente veremos muchos comentarios sobre la historia de la nasa, pero en el final veremos un comentario que puede estar cifrado o encriptado de alguna manera:
 
-![comment](../../../maquina-Stellarjwt/img/comment.png)
+![comment](./images/Stellarjwt/img/comment.png)
 
 Si a este lo metemos en [CyberChef](https://gchq.github.io/CyberChef/) con el operador "magic", nos dirá lo siguiente:
 
@@ -119,7 +119,7 @@ Teniendo esta información ejecutaremos `hydra` apuntando al ssh usando el usuar
 hydra -l neptuno -P pass.txt ssh://172.17.0.2
 ```
 
-![hydra](../../../maquina-Stellarjwt/img/hydra.png)
+![hydra](./images/Stellarjwt/img/hydra.png)
 
 Como vemos, tenemos una contraseña para ssh, por lo cual nos conectaremos usando `ssh neptuno@172.17.0.2` con la contraseña encontrada.
 
@@ -179,6 +179,6 @@ Una vez ejecutado ya seremos root.
 
 #### Root
 
-![root](../../../maquina-Stellarjwt/img/root.png)
+![root](./images/Stellarjwt/img/root.png)
 
 Gracias por leer.....

@@ -1,12 +1,12 @@
 # allien
 
-Máquina "Allien" de [DockerLabs](../../../maquina-allien/https;/dockerlabs.es)
+Máquina "Allien" de [DockerLabs](./images/allien/https;/dockerlabs.es)
 
 Autor: [Luisillo\_o](https://www.youtube.com/@Luisillo_o)
 
 Dificultad: Fácil
 
-![allien](../../../maquina-allien/img/allien.png)
+![allien](./images/allien/img/allien.png)
 
 ## Reconocimiento
 
@@ -85,7 +85,7 @@ Si vamos a la web no se ve nada interesante, por lo que no la voy a mostrar xD.
 
 Ahora podemos hacer lo siguiente para intentar enumerar usuarios de la máquina victima usando `rpcclient`:
 
-![rpcclient](../../../maquina-allien/img/rpcclient.png)
+![rpcclient](./images/allien/img/rpcclient.png)
 
 Como vemos tenemos varios usuarios:
 
@@ -105,7 +105,7 @@ Ahora que tenemos usuarios, vamos a intentar hacer fuerza bruta con `netexec`:
 sudo netexec smb 172.17.0.2 -u 'satriani7' -p /opt/rockyou.txt --ignore-pw-decoding
 ```
 
-![smb](../../../maquina-allien/img/smb.png)
+![smb](./images/allien/img/smb.png)
 
 Como vemos, podemos acceder al smb con la contraseña "50cent" y el usuario "satriani7".
 
@@ -222,6 +222,6 @@ sudo service ../../../../bin/bash
 
 #### Root
 
-![root](../../../maquina-allien/img/root.png)
+![root](./images/allien/img/root.png)
 
 Gracias por leer....

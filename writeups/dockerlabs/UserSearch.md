@@ -4,7 +4,7 @@ Autor: [kvzlx](https://www.youtube.com/@kvzlx)
 
 Dificultad: Medio
 
-![Usersearch](/maquina-usersearch/img/DockerLabs.png)
+![Usersearch](images/usersearch/img/DockerLabs.png)
 
 # Reconocimiento
 
@@ -119,4 +119,4 @@ Otra manera es borrar el script "system_info.py", ya que aun que no nos pertenez
 
 ## Root
 
-![Root](/maquina-usersearch/img/root.png)
+![Root](images/usersearch/img/root.png)

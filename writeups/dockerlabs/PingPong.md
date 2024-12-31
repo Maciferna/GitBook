@@ -4,7 +4,7 @@ Autor: [El Pingüino de Mario](https://www.youtube.com/channel/UCGLfzfKRUsV6Bzkr
 
 Dificultad: Medio
 
-![PingPong](/maquina-pingpong/img/dockerlabs.png)
+![PingPong](images/pingpong/img/dockerlabs.png)
 
 # Reconocimiento
 
@@ -101,7 +101,7 @@ ping -c 4 $entrada_del_usuario
 
 sabiendo esto, podríamos intentar ejecutar comandos poniendo un ";", y asi ejecutar otro comando además de ping:
 
-![comandos](/maquina-pingpong/img/comandos.png)
+![comandos](images/pingpong/img/comandos.png)
 
 Como vemos, si se ejecutan los comandos.
 
@@ -179,6 +179,6 @@ Ejecutamos `su` y ya seremos root.
 
 ## Root
 
-![root](/maquina-pingpong/img/root.png)
+![root](images/pingpong/img/root.png)
 
 Gracias por leer :)

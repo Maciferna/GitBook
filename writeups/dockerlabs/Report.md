@@ -6,7 +6,7 @@ Autor: [TLuisillo\_o](https://www.youtube.com/@Luisillo_o)
 
 Dificultad: Medio
 
-![dock](../../../maquina-Report/img/dock.png)
+![dock](./images/Report/img/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -116,7 +116,7 @@ Finished
 
 Al parecer tenemos un `admin.php`, el cual si vamos desde el navegador veremos lo siguiente:
 
-![admin](../../../maquina-Report/img/admin.png)
+![admin](./images/Report/img/admin.png)
 
 Como vemos tenemos un panel de inicio de sesión, sabiendo esto podríamos intentar usar `hydra` para hacer fuerza bruta y ver si obtenemos la contraseña:
 
@@ -124,7 +124,7 @@ Como vemos tenemos un panel de inicio de sesión, sabiendo esto podríamos inten
 hydra -l admin -P /opt/rockyou.txt realgob.dl http-post-form "/admin.php:username=^USER^&password=^PASS^:F=Usuario o contraseña incorrectos."
 ```
 
-![hydra](../../../maquina-Report/img/hydra.png)
+![hydra](./images/Report/img/hydra.png)
 
 como vemos, hemos obtenido la contraseña, "admin:admin123" (para obtenerla hay que esperar bastante ya que se encuentra en la línea 90006).
 
@@ -132,19 +132,19 @@ como vemos, hemos obtenido la contraseña, "admin:admin123" (para obtenerla hay 
 
 Ahora estando dentro de "cargas.php", veremos lo siguiente:
 
-![cargas](../../../maquina-Report/img/cargas.png)
+![cargas](./images/Report/img/cargas.png)
 
 Al parecer nos permite subir archivos, los cuales si subimos estarán en "/uploads/", el problema de esto es que si intentamos subir un archivo php, nos dirá que no está permitido ese tipo de archivos, también si intentamos hacer un bypass de la extensión nos dirá lo mismo, por lo que mejor abrimos el burpsuite y vemos que hace por detrás. Una vez interceptada la petición, presionaremos "ctrl+r" al mismo tiempo, esto nos mandará la petición al repeater y estaremos más cómodos:
 
-![repeater1](../../../maquina-Report/img/repeater1.png)
+![repeater1](./images/Report/img/repeater1.png)
 
 En este caso, puede que la web no se fije en la extensión sino en el "Content-type", por lo que podríamos cambiarlo por "image/jpeg", quedará así:
 
-![repeater2](../../../maquina-Report/img/repeater2.png)
+![repeater2](./images/Report/img/repeater2.png)
 
 Una vez cambiado solo le damos a "send", y en la respuesta veremos esto:
 
-![repeater3](../../../maquina-Report/img/repeater3.png)
+![repeater3](./images/Report/img/repeater3.png)
 
 Ahora que ya se subió, tendremos que hacer una u otra cosa dependiendo de nuestra shell, en mi caso es esta:
 
@@ -252,12 +252,12 @@ MY_PASS=64 6f 63 6b 65 72 6c 61 62 73 34 75
 
 Si le pasamos esto a [CyberChef](https://gchq.github.io/CyberChef/) nos dirá lo siguiente:
 
-![rootPass](../../../maquina-Report/img/rootPass.png)
+![rootPass](./images/Report/img/rootPass.png)
 
 al parecer, la contraseña de root es "dockerlabs4u", por lo que escalamos ejecutando `su root` y poniendo su contraseña.
 
 #### Root
 
-![root](../../../maquina-Report/img/root.png)
+![root](./images/Report/img/root.png)
 
 Gracias por leer......

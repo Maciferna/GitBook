@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Difícil
 
-![Dock](../../../maquina-HackMeDaddy/imagenes/Dock.png)
+![Dock](./images/HackMeDaddy/imagenes/Dock.png)
 
 ## RECONOCIMIENTO
 
@@ -42,7 +42,7 @@ Como vemos no hay nada interesante, solo esta abierto el puerto 22 y 80 pero nad
 
 #### PUERTO 80:
 
-![80](../../../maquina-HackMeDaddy/imagenes/80.png)
+![80](./images/HackMeDaddy/imagenes/80.png)
 
 En un principio no hay nada interesante, por lo que haremos un poco de fuzzing con gobuster:
 
@@ -85,7 +85,7 @@ Lo único interesante es el archivo `info.txt` que nos habla de un `README.txt` 
 d05notfound exploit payload shell bruteforce vulnerability cipher zero-day phishing root port_scan firewall backdoor
 ```
 
-Entonces probando si existe en el servidor vemos que si existe la carpeta `d05notfound` y contiene esto: ![d05notfound](../../../maquina-HackMeDaddy/imagenes/d05notfound.png)
+Entonces probando si existe en el servidor vemos que si existe la carpeta `d05notfound` y contiene esto: ![d05notfound](./images/HackMeDaddy/imagenes/d05notfound.png)
 
 Pero lo único importante es que al final dice que se puede hacer un "ping". Ahora abriremos el burpsuite y capturamos la peticion al poner `-c 1 google.com`, damos click derecho a la petición y damos click izquierdo en donde dice "Send To Repeater". Ahora vamos al repeater y le damos al "send" y en response ponemos "Raw", ahora, si bajamos vemos que si se ejecuta el ping y nos muestra esto:
 
@@ -215,6 +215,6 @@ sudo php -r "system('$CMD');"
 
 _y ya seriamos root_
 
-![root](../../../maquina-HackMeDaddy/imagenes/root.png)
+![root](./images/HackMeDaddy/imagenes/root.png)
 
 Muy buena maquina, adiós...

@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Dificil
 
-![dock](../../maquina-crackoff/imagenes/dock.png)
+![dock](./images/crackoff/imagenes/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -47,7 +47,7 @@ Solo vemos el puerto 80 y 22 abierto, por lo que continuaremos al navegador.
 
 **PUERTO 80:**
 
-![80](../../maquina-crackoff/imagenes/80.png)
+![80](./images/crackoff/imagenes/80.png)
 
 Luego de ver un rato, entré en "Iniciar Sesión" y vi un panel de login que es vulnerable a inyeccion sql, por lo que ejecutaremos lo siguiente para poder ver la base de datos:
 
@@ -132,7 +132,7 @@ Una vez hecho esto, ya tendremos conectividad con el puerto 8080, por lo que ten
 
 **PUERTO 8080:**
 
-![8080](../../maquina-crackoff/imagenes/tomcat.png)
+![8080](./images/crackoff/imagenes/tomcat.png)
 
 Como vemos hay un tomcat, pero si queremos ir a "manager app" nos pide contraseña, por lo que haremos lo siguiente:
 
@@ -206,6 +206,6 @@ User tomcat may run the following commands on e95886b6af7e:
 
 viendo que podemos ejecutarlo como root y que encima lo podemos modificar, haremos que le de permisos SUID a bash. Para hacer esto modificamos la primer linea y cambiamos `sh` por `bash` y en la segunda un `chmod u+s /bin/bash`, una vez hecho esto ejecutamos el script como root y luego ponemos `bash -p`. _Ya somos root_:
 
-![root](../../maquina-crackoff/imagenes/root.png)
+![root](./images/crackoff/imagenes/root.png)
 
 Gracias por leer.....

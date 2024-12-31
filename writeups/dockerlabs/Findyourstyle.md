@@ -6,7 +6,7 @@ Autor: [El Pingüino de Mario](https://www.youtube.com/channel/UCGLfzfKRUsV6Bzkr
 
 Dificultad: Fácil
 
-![Dock](../../../maquina-findyourstyle/img/dock.png)
+![Dock](./images/findyourstyle/img/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -48,7 +48,7 @@ El único puerto abierto es el 80 y corre `Apache httpd 2.4.25`, y por lo que se
 
 ## INTRUSIÓN
 
-Si buscamos algún exploit ejecutando `searchsploit drupal 8.0`, veremos algunos que dicen de un RCE y un poc, ahora mismo no usaremos ninguno de esos (aunque se puede ya que funcionan), si no uno que creé yo que hace exactamente lo mismo, solo que en vez de ejecutar comandos nos envía una reverse shell. [Exploit](../../../maquina-findyourstyle/scripts/exploit.py)
+Si buscamos algún exploit ejecutando `searchsploit drupal 8.0`, veremos algunos que dicen de un RCE y un poc, ahora mismo no usaremos ninguno de esos (aunque se puede ya que funcionan), si no uno que creé yo que hace exactamente lo mismo, solo que en vez de ejecutar comandos nos envía una reverse shell. [Exploit](./images/findyourstyle/scripts/exploit.py)
 
 Para hacerlo simplemente debemos seguir estos pasos.
 
@@ -60,7 +60,7 @@ sudo nc -lvnp 443
 
 luego de eso ejecutamos el exploit con `python3 exploit.py`, este nos pedirá una ip y al pasarle la de la víctima subirá una reverse shell que nos llegará directamente:
 
-![shell](../../../maquina-findyourstyle/img/shell.png)
+![shell](./images/findyourstyle/img/shell.png)
 
 luego presionamos "CTRL+C" en el exploit y ya estaremos dentro.
 
@@ -76,7 +76,7 @@ Ahora que estamos totalmente cómodos, podemos continuar. Luego de revisar los u
 
 También luego de revisar los archivos de configuración de drupal, encuentro lo siguiente:
 
-![pass](../../../maquina-findyourstyle/img/pass.png)
+![pass](./images/findyourstyle/img/pass.png)
 
 Por lo que solo escalamos ejecutando `su ballenita` y poniendo su contraseña.
 
@@ -92,6 +92,6 @@ y obtendremos la contraseña.
 
 #### Root
 
-![root](../../../maquina-findyourstyle/img/root.png)
+![root](./images/findyourstyle/img/root.png)
 
 Gracias por leer...

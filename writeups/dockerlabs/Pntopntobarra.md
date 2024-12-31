@@ -2,7 +2,7 @@
 
 Maquina pntopntobarra de [DockerLabs](https://dockerlabs.es)
 
-![dock](../../../maquina-pntopntobarra/imagenes/dock.png)
+![dock](./images/pntopntobarra/imagenes/dock.png)
 
 Autor: yo ([maciiii\_\_\_](https://instagram.com/macim0_))
 
@@ -34,7 +34,7 @@ Vemos el puerto 22 y 80 abierto, nada interesante por lo que iremos directo al p
 
 ### PUERTO 80:
 
-![80](../../../maquina-pntopntobarra/imagenes/80.png)
+![80](./images/pntopntobarra/imagenes/80.png)
 
 Parece un tipo de advertencia y nos nombra un "LeFvIrus", si vemos las letras en mayuscula seria "LFI", por lo que podria tratar de un `Local File Inclusion`, sabiendo eso podemos entrar a donde dice "Ejemplos de computadoras infectadas" y nos redirige a un ".php" que dice `Error al cargar el archivo.` pero en la barra de busqueda pone `http://172.17.0.2/ejemplos.php?images=./ejemplo1.png` por lo que cambiamos el "./ejemplo1.png" por `/etc/passwd`. Como hay un usuario llamado "nico" podemos ver si se puede leer su clave privada de ssh, simplemente ponemos "/home/nico/.ssh/id\_rsa" y listo. Al enviarlo podemos ver la clave privada de el usuario nico. Nos copiamos la clave a nuestra maquina local a un archivo llamado "id\_rsa", le damos permisos con `chmod 600 id_rsa` y luego entramos sin contraseña usando `ssh -i id_rsa nico@172.17.0.2`.
 
@@ -48,6 +48,6 @@ sudo env /bin/bash
 
 y listo, somos root:
 
-![root](../../../maquina-pntopntobarra/imagenes/root.png)
+![root](./images/pntopntobarra/imagenes/root.png)
 
 Gracias.....

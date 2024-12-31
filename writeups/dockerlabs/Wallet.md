@@ -4,7 +4,7 @@ Autor: [Pylon & El Pingüino de Mario](https://www.youtube.com/@Pylonet)
 
 Dificultad: Medio
 
-![Wallet](/maquina-wallet/img/wallet.png)
+![Wallet](images/wallet/img/wallet.png)
 
 # Reconocimiento
 
@@ -113,6 +113,6 @@ luego, ejecutamos `su` y ya seremos root.
 
 ## Root
 
-![Root](/maquina-wallet/img/Root.png)
+![Root](images/wallet/img/Root.png)
 
 Gracias por leer :)

@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Fácil
 
-![docker](../../../maquina-vulnvault/imagenes/docker.png)
+![docker](./images/vulnvault/imagenes/docker.png)
 
 ## RECONOCIMIENTO
 
@@ -50,13 +50,13 @@ Lo único que se puede ver es que esta el puerto 80 de `apache` y 22 de `openssh
 
 #### PUERTO 80:
 
-![80](../../../maquina-vulnvault/imagenes/80.png)
+![80](./images/vulnvault/imagenes/80.png)
 
 Como vemos parece ser una página de reportes, también podemos subir archivos, pero nada de eso nos sirve ya que luego de probar un rato descubrí esto:
 
-![comando](../../../maquina-vulnvault/imagenes/comando.png)
+![comando](./images/vulnvault/imagenes/comando.png)
 
-![output](../../../maquina-vulnvault/imagenes/output.png)
+![output](./images/vulnvault/imagenes/output.png)
 
 Como vemos, podemos ejecutar comandos de manera remota, por lo que ahora leeremos el archivo `/etc/passwd` para ver que usuarios existen en la máquina, para hacerlo simplemente ejecutamos:
 
@@ -181,6 +181,6 @@ chmod u+s /bin/bash
 
 lo guardamos con `ctrl+o` presionamos enter y `ctrl+x` y listo, ahora simplemente ejecutamos `bash -p` y listo, _ya somos root_.
 
-![root](../../../maquina-vulnvault/imagenes/root.png)
+![root](./images/vulnvault/imagenes/root.png)
 
 Gracias por leer, chau.

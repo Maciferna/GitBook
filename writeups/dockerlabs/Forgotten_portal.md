@@ -6,7 +6,7 @@ Autor: [Cyberland](https://cyberlandsec.com/)
 
 Dificultad: Medio
 
-![Dockerlabs](../../../maquina-forgotten_portal/img/dock.png)
+![Dockerlabs](./images/forgotten_portal/img/dock.png)
 
 ## Reconocimiento
 
@@ -52,7 +52,7 @@ y al parecer estamos frente a una máquina ubuntu.
 
 SI vamos al puerto 80 desde el navegador, veremos una web sin nada interesante. Pero si a esta le revisamos el código fuente, vermos la siguiente nota:
 
-![nota](../../../maquina-forgotten_portal/img/nota.png)
+![nota](./images/forgotten_portal/img/nota.png)
 
 Por lo que si vamos a `m4ch1n3_upload.html`, veremos un formulario para subir archivos.
 
@@ -112,6 +112,6 @@ sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/ba
 
 #### Root
 
-![root](../../../maquina-forgotten_portal/img/root.png)
+![root](./images/forgotten_portal/img/root.png)
 
 Gracias por leer :)

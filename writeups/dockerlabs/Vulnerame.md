@@ -6,7 +6,7 @@ Autor: [firstatack](https://firstatack.github.io/)
 
 Dificultad: Dificil
 
-![vulnerame](../../../maquina-vulnerame/img/vulnerame.png)
+![vulnerame](./images/vulnerame/img/vulnerame.png)
 
 ## RECONOCIMIENTO
 
@@ -127,7 +127,7 @@ Finished
 
 el directorio `/javascript/` está en 403 forbidden por lo que lo dejamos, pero el directorio `/wordpress/` si tiene cosas interesantes:
 
-![wordpress](../../../maquina-vulnerame/img/wordpress.png)
+![wordpress](./images/vulnerame/img/wordpress.png)
 
 al parecer dice que es un `joomla` en un directorio llamado `wordpress`, por lo que podemos acudir a usar la herramienta `joomscan` de la siguiente manera:
 
@@ -463,6 +463,6 @@ exec "/bin/bash"
 
 luego lo guardamos y al ejecutarlo con sudo **ya habremos ganado acceso root**.
 
-![root](../../../maquina-vulnerame/img/root.png)
+![root](./images/vulnerame/img/root.png)
 
 Gracias por leer.

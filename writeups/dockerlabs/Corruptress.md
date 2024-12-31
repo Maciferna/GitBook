@@ -8,7 +8,7 @@ Autor:yo(maciiii\_\_\_)
 
 Dificultad: Difícil
 
-![Dockerlabs](../../../maquina-corruptress/imagenes/Dockerlabs.png)
+![Dockerlabs](./images/corruptress/imagenes/Dockerlabs.png)
 
 ## INTRUSIÓN
 
@@ -46,13 +46,13 @@ Nmap done: 1 IP address (1 host up) scanned in 1.80 seconds
 
 Vemos el puerto 80 y 22 abiertos, por lo que continuaremos entrando por el navegador. Como vemos que tiene un dominio, modificamos el archivo `/etc/hosts` y hacemos que la ip apunte al dominio `paginadelgobiernoreal.gob`. Ahora si intentamos entrar nuevamente desde el navegador vemos que carga la página predeterminada de apache debian, por lo que procederemos a hacer un poco de fuzzing con gobuster, pero como no nos encuentra nada podemos revisar el codigo fuente para ver si hay alguna pista.
 
-![Fuente1](../../../maquina-corruptress/imagenes/Fuente1.png)
+![Fuente1](./images/corruptress/imagenes/Fuente1.png)
 
 Como vemos, nombra una tal "futurepage.html", pero normalmente en la pagina predeterminada de apache llega solo a html, por lo que podriamos intentar entrar desde el navegador. Al entrar vemos que es nuevamente la página de apache por lo que podriamos revisar nuevamente el código fuente para ver si nuevamente hay algo. Al revisarlo encontramos una pista y 3 cosas raras:
 
-![fuente2.1](../../../maquina-corruptress/imagenes/Fuente2.1.png)
+![fuente2.1](./images/corruptress/imagenes/Fuente2.1.png)
 
-![Fuente2.2](../../../maquina-corruptress/imagenes/Fuente2.2.png)
+![Fuente2.2](./images/corruptress/imagenes/Fuente2.2.png)
 
 En la primer imagen se ven 3 cosas raras que son "MYSQL", "PAGE" y "FILE". Como no sabemos todavia que es nos lo guardamos en unas notas o en algún lado a mano para verlo mas tarde.
 
@@ -97,9 +97,9 @@ Finished
 
 Al parecer hay un "page.php", por lo que continuaremos entrando desde el navegador para ver que hay. Al parecer es la misma página pero como a php se le pueden poner parámetro con `?$PARAMETRO` podemos intentar ver si hay alguno.
 
-Luego de ejecutar un parametro conocido como "cmd" vemos que nos dice lo siguiente: ![Cmd](../../../maquina-corruptress/imagenes/Cmd.png)
+Luego de ejecutar un parametro conocido como "cmd" vemos que nos dice lo siguiente: ![Cmd](./images/corruptress/imagenes/Cmd.png)
 
-Como vemos parece que hay comandos permitidos y otros que no. Al probar `ls -la ./`("./ " para evitarnos problemas de permisos ya que vemos que hay comandos que no están permitidos) nos muestra los archivos del directorio: ![ls](../../../maquina-corruptress/imagenes/ls.png)
+Como vemos parece que hay comandos permitidos y otros que no. Al probar `ls -la ./`("./ " para evitarnos problemas de permisos ya que vemos que hay comandos que no están permitidos) nos muestra los archivos del directorio: ![ls](./images/corruptress/imagenes/ls.png)
 
 Ahora sabiendo esto entramos al directorio `developerPagee` y al parecer es un sitio de wordpress. Vamos al "wp-admin.php" y intentamos iniciar sesión con credenciales tipicas como:
 
@@ -186,7 +186,7 @@ lo que hará que cuando el script intente usar la biblioteca, primero usará nue
 
 Siendo este usuario podriamos intentar ejecutar nuevamente `sudo -l`, pero nos pide contraseña. Al hacer un `ls -la` vemos un archivo llamado ".secreto" el cual parece ser una wordlist. Ahora usaremos el script [Linux-Su-Force](https://raw.githubusercontent.com/Maalfer/Sudo_BruteForce/main/Linux-Su-Force.sh) con los usuarios "vicepresidente" y "presidente".
 
-Luego de esperar un gran rato nos encuentra lo siguiente: ![pass1](../../../maquina-corruptress/imagenes/contra.png)
+Luego de esperar un gran rato nos encuentra lo siguiente: ![pass1](./images/corruptress/imagenes/contra.png)
 
 por lo que ponemos `su vicepresidente` y ponemos la contraseña.
 
@@ -212,4 +212,4 @@ sudo -u root /usr/bin/puttygen id_rsa -o /root/.ssh/authorized_keys -O public-op
 
 Le damos permiso de ejecución con `chmod 600 id_rsa` y finalmente la usamos con `ssh -i id_rsa root@localhost` y listo, somos root
 
-![root](../../../maquina-corruptress/imagenes/root.png)
+![root](./images/corruptress/imagenes/root.png)

@@ -6,7 +6,7 @@ Autor: [kaikoperez](https://github.com/kiket25)
 
 Dificultad: Medio
 
-![devil](../../../maquina-devil/img/deviil.png)
+![devil](./images/devil/img/deviil.png)
 
 ## RECONOCIMIENTO
 
@@ -40,7 +40,7 @@ Solo tenemos el puerto 80 abierto y `está corriendo apache httpd`, por lo que c
 
 **Puerto 80:**
 
-![80](../../../maquina-devil/img/80.png)
+![80](./images/devil/img/80.png)
 
 Si nos fijamos al final, se nos nombra wordpress y en el propio codigo fuente hay cosas de wordpress, el problema es que si intentamos entrar a cualquier cosa relacionada con wordpress, nos va a redirigir a la misma página. Como sabemos, si intentamos entrar a alguna de eso nos redirige, pero... ¿que pasa si entramos a una carpeta en la que se indexe el contenido? como por ejemplo "wp-content/". Si vamos desde el navegador veremos una página en blanco, pero en wordpress siempre hay una carpeta uploads ahí, por lo que si nos metemos veremos una carpeta extraña llamada "esteestudirectorio", a la cual si entramos veremos una nota en morse que dice lo siguiente:
 
@@ -64,7 +64,7 @@ luego de que termine, veremos esto:
 
 Como vemos hay una carpeta "backdoor" en "./plugins/backdoor/" y tiene un index.php, por lo que si vemos desde el navegador, veremos lo siguiente:
 
-![backdoor](../../../maquina-devil/img/backdoor.png)
+![backdoor](./images/devil/img/backdoor.png)
 
 ## INTRUSION
 
@@ -163,6 +163,6 @@ lucas@ad0c48cd34f2:~/.secret$
 
 Siendo lucas, veremos que en su home hay una carpeta llamada ".game" y un archivo que tiene permisos SUID (porque está en rojo), y además el archivo .c que se usó para crearlo, el cual si leemos, nos genera una bash como root al poner el 7, por lo que lo ejecutamos y al poner un 7 escalaremos a root, pero el grupo sigue siendo andy, por lo que editamos con nano el `/etc/passwd` y borramos la "x" de root, y ahora seremos root totalmente:
 
-![root](../../../maquina-devil/img/root.png)
+![root](./images/devil/img/root.png)
 
 Gracias por leer...

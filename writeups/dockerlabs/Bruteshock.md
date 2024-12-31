@@ -6,7 +6,7 @@ Autor: [Darksblack & maciiii\_\_\_(yo)](https://linktr.ee/maciiii___)
 
 Dificultad: Medio
 
-![BruteShock](../../../maquina-bruteshock/img/BruteShock.png)
+![BruteShock](./images/bruteshock/img/BruteShock.png)
 
 ## RECONOCIMIENTO
 
@@ -41,11 +41,11 @@ En este caso solo el puerto 80 está abierto y corre `Apache httpd 2.4.62`.
 
 Vamos a la web y no encontramos con lo siguiente:
 
-![web](../../../maquina-bruteshock/img/web.png)
+![web](./images/bruteshock/img/web.png)
 
 Como vemos tenemos un panel de login, y si probamos las credenciales básicas no no sirve, por lo que recurrimos a `hydra`, pero primero revisamos si tenemos cookies:
 
-![cookies](../../../maquina-bruteshock/img/cookies.png)
+![cookies](./images/bruteshock/img/cookies.png)
 
 al parecer tenemos una, por la que también se la pasaremos a `hydra` para que haga el ataque: Formato:
 
@@ -59,11 +59,11 @@ Aplicado:
 hydra -l admin -P /opt/rockyou.txt 172.17.0.2 http-post-form "/index.php:username=^USER^&password=^PASS^:H=Cookie: PHPSESSID=4iulq1ru3emdckdsoipiuq413m:F=Credenciales incorrectas." -V
 ```
 
-![hydra](../../../maquina-bruteshock/img/hydra.png)
+![hydra](./images/bruteshock/img/hydra.png)
 
 Ingresamos las credenciales y vemos la siguiente página:
 
-![web2](../../../maquina-bruteshock/img/web2.png)
+![web2](./images/bruteshock/img/web2.png)
 
 De primeras parece un pishing pero no lo es, si probamos a ingresar algo no pasa nada interesante, pero en el mensaje dice "User-Agent almacenado en el log". Luego de buscar de que puede tratar ([info](https://blog.cloudflare.com/inside-shellshock/)) intento aprovecharlo. Para esto abro burpsuite y pruebo lo siguiente:
 
@@ -94,7 +94,7 @@ De primeras parece un pishing pero no lo es, si probamos a ingresar algo no pasa
     ```
 3.  Capturo la petición al entrar a la página y lo envío al repeater(ctrl+r):
 
-    ![request](../../../maquina-bruteshock/img/request.png)
+    ![request](./images/bruteshock/img/request.png)
 4.  Cambio el user-agent por lo siguiente:
 
     ```css
@@ -103,11 +103,11 @@ De primeras parece un pishing pero no lo es, si probamos a ingresar algo no pasa
 
 Una vez ejecutado veremos esto:
 
-![python3](../../../maquina-bruteshock/img/python3.png)
+![python3](./images/bruteshock/img/python3.png)
 
 ahora que la shell se guardó, entramos por el navegador y veremos una página para ejecutar comandos:
 
-![web2](../../../maquina-bruteshock/img/web3.png)
+![web2](./images/bruteshock/img/web3.png)
 
 ya podemos ejecutar comandos en la máquina victima.
 
@@ -161,7 +161,7 @@ Como vemos tenemos un txt el cual si lo leemos es el hash del shadow para el usu
 
 Una vez completado todos los pasos obtendremos la siguiente contraseña:
 
-![john](../../../maquina-bruteshock/img/john.png)
+![john](./images/bruteshock/img/john.png)
 
 Por lo que escalamos con `su darksblack` e introducimos sus credenciales.
 
@@ -169,7 +169,7 @@ Por lo que escalamos con `su darksblack` e introducimos sus credenciales.
 
 Si ejecutamos `sudo -l` veremos que podemos ejecutar como el usuario "maci" un script que se encuentra en su home (por lo que no lo podremos leer), así que lo ejecutamos y vemos que pasa:
 
-![scriptsh](../../../maquina-bruteshock/img/scriptsh.png)
+![scriptsh](./images/bruteshock/img/scriptsh.png)
 
 Al parecer tenemos que adivinar un numero, este script puede que use un `eq comparer` de bash para verificar si nuestra entrada es correcta, por lo que si el script usó doble corchete para hacerlo, podremos inyectar un comando y escalar, para hacerlo escribiremos lo siguiente en la adivinanza:
 
@@ -218,6 +218,6 @@ Ahora al ejecutar `sudo -l` veremos que podemos ejecutar el binario `dos2unix` c
 
 Escalamos a root ejecutando `su`.
 
-![root](../../../maquina-bruteshock/img/root.png)
+![root](./images/bruteshock/img/root.png)
 
 Gracias por leer.....

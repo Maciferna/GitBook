@@ -4,7 +4,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Dificil
 
-![Flow](/maquina-flow/img/flow.png)
+![Flow](images/flow/img/flow.png)
 
 # Reconocimiento
 
@@ -60,11 +60,11 @@ hydra -l d1se0 -P /opt/rockyou.txt 172.17.0.2 http-post-form '/index.php:usernam
 
 una vez lo hacemos, obtenemos las credenciales:
 
-![Password](/maquina-flow/img/pass.png)
+![Password](images/flow/img/pass.png)
 
 Estando en "gestionAdminPanel.php", pruebo a capturar la petición con burpsuite, y reemplazar el "User-agent" por un comando, y revisando la respuesta, veo que podemos ejecutar comandos:
 
-![Burp-command](/maquina-flow/img/burp-id.png)
+![Burp-command](images/flow/img/burp-id.png)
 
 Sabiendo esto, podemos intentar enumerar un poco de ahí mismo. Para esto vamos a primero enumerar usuarios leyendo con `cat` el archivo `/etc/passwd` y veo que tenemos uno:
 

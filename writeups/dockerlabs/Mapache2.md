@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Medio
 
-![mapache](../../../maquina-mapache2/img/mapache2.png)
+![mapache](./images/mapache2/img/mapache2.png)
 
 ## RECONOCIMIENTO
 
@@ -72,7 +72,7 @@ y como vemos en la salida, el mensaje es correcto, por lo que tenemos un posible
 
 Ahora que ya obtuvimos algo de información, podemos ir a el navegador y entrar en la ip para ver que hay:
 
-![80](../../../maquina-mapache2/img/80.png)
+![80](./images/mapache2/img/80.png)
 
 Como vemos es una página que no tiene mucha importancia pero tiene un panel de login, por lo que luego de probar, intento usar `cewl` para obtener las palabras de la página y guardárnoslas para usarlas con hydra :
 
@@ -86,7 +86,7 @@ una vez hecho eso ejecutamos hydra usando el usuario "medusa" y el diccionario:
 hydra -l medusa -P pass <ip> http-post-form "/login.php:username=medusa&password=^PASS^:Invalid credentials"
 ```
 
-![hydra](../../../maquina-mapache2/img/hydra.png)
+![hydra](./images/mapache2/img/hydra.png)
 
 Como vemos ya tenemos la contraseña.
 
@@ -149,6 +149,6 @@ en resumen: Cambiamos "#!/bin/sh" por "#!/bin/bash" y agregamos un chmod debajo 
 
 Ahora ejecutamos `sudo service apache2 restart` y listo, solo nos queda ejecutar `bash -p` y ya seremos root.
 
-![root](../../../maquina-mapache2/img/root.png)
+![root](./images/mapache2/img/root.png)
 
 Gracias por leer.

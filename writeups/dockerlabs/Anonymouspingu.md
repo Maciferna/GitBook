@@ -6,7 +6,7 @@ Autor: [El Pingüino de Mario](https://www.youtube.com/channel/UCGLfzfKRUsV6Bzkr
 
 Dificultad: Fácil
 
-![dock](../../../maquina-anonymouspingu/img/dock.png)
+![dock](./images/anonymouspingu/img/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -104,7 +104,7 @@ Como podemos ver estamos en la propia página, por lo que teniendo en cuenta que
 
 Para esto podemos usar el script que hice para esta máquina:
 
-[Script](../../../maquina-anonymouspingu/scripts/intrusion.sh)
+[Script](./images/anonymouspingu/scripts/intrusion.sh)
 
 Una vez descargado, le damos permisos con `chmod +x intrusion.sh`, luego escuchamos con netcat en el puerto 9090:
 
@@ -180,6 +180,6 @@ gladys:x:1002:1002::/home/gladys:/bin/bash
 
 y ahora seremos root sin problemas con los demás usuarios:
 
-![root](../../../maquina-anonymouspingu/img/root.png)
+![root](./images/anonymouspingu/img/root.png)
 
 Gracias por leer.

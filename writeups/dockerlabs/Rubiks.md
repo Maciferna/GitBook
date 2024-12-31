@@ -6,7 +6,7 @@ Autor: [Luisillo\_o](https://www.youtube.com/@Luisillo_o)
 
 Dificultad: Medio
 
-![rubiks](../../../maquina-rubiks/img/rubiks.png)
+![rubiks](./images/rubiks/img/rubiks.png)
 
 ## RECONOCIMIENTO
 
@@ -58,7 +58,7 @@ Ahora entramos desde el navegador:
 
 **Puerto 80:**
 
-![80](../../../maquina-rubiks/img/80.png)
+![80](./images/rubiks/img/80.png)
 
 Al parecer es una página de una tienda pero nada nos sirve.
 
@@ -68,11 +68,11 @@ Ahora haremos un poco de fuzzing web con gobuster para ver si encontramos algo:
 gobuster dir -u http://rubikcube.dl/ -w <wordlist> -x php,html,txt
 ```
 
-![gobuster](../../../maquina-rubiks/img/gobuster.png)
+![gobuster](./images/rubiks/img/gobuster.png)
 
 Como vemos hay un directorio `/administration/`, al cual si entramos y vamos a `Configuraciones > console` la url nos cambiará a "http://rubikcube.dl/myconsole.php" pero nos dice que no existe. Podriamos poner "myconsole.php" en "/administration/" y ver si realmente existe:
 
-![console](../../../maquina-rubiks/img/console.png)
+![console](./images/rubiks/img/console.png)
 
 ## INTRUSION
 
@@ -130,6 +130,6 @@ Fuente: https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/bash-e
 
 Una vez ejecutado ganaremos acceso root:
 
-![root](../../../maquina-rubiks/img/root.png)
+![root](./images/rubiks/img/root.png)
 
 Gracias por leer.

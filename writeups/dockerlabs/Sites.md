@@ -2,7 +2,7 @@
 
 Hoy haremos la maquina Sites de [Dockerlabs](https://dockerlabs.es)
 
-![autor](../../../maquina-sites/imagenes/autor.png)
+![autor](./images/sites/imagenes/autor.png)
 
 Autor: [ElPingüinoDeMario](https://www.youtube.com/@ElPinguinoDeMario)
 
@@ -54,11 +54,11 @@ No se encuentra nada interesante así que continuaremos entrando desde el navega
 
 **PUERTO 80:**
 
-![puerto80](../../../maquina-sites/imagenes/puerto80.png)
+![puerto80](./images/sites/imagenes/puerto80.png)
 
 Luego de estar leyendo la página veo que trata como de un "foro" el cual explica un poco de la vulnerabilidad LFI. Revisé el código fuente y no encontré nada pero por probar antes de usar feroxbuster/gobuster se me ocurrió entrar a un archivo que nombraba en la "publicación", el cual se llama "vulnerable.php". Resulta que si es un archivo y ya no nos hace falta usar feroxbuster/gobuster ; nos dice lo siguiente:
 
-![vulnerablePHP](../../../maquina-sites/imagenes/vulnerablePHP.png)
+![vulnerablePHP](./images/sites/imagenes/vulnerablePHP.png)
 
 Nos dice que le demos un "page" o "username", viendo que la extensión del archivo es '.php' podemos probar poner '?page=' o '?username=' e introducir algo, si en "username" ponemos cualquier cosa nos da la bienvenida pero en "page" se encuentra lo interesante ya que podremos hacer un LFI, y leer archivos del sistema. Primero probé poner "../../../../../../../../../etc/passwd" como algo típico pero quedaba en blanco, así que probé con "/etc/passwd" y ya me mostró el archivo, por lo que confirmamos que trata de un LFI.
 
@@ -68,7 +68,7 @@ Intento conseguir el "id\_rsa" de root o de alguno de los usuarios por probar ya
 python3 php_filter_chain_generator.py --chain "<?php system('comando que queramos'); ?>"
 ```
 
-Estuve un rato probando en subir un archivo y enviarme una reverse shell pero finalmente la solución fue mucho mas simple ya que se encontraba un archivo llamado "archivitotraviesito" el cual tenia lo siguiente: ![archivitotraviesito](../../../maquina-sites/imagenes/archivitotraviesito.png)
+Estuve un rato probando en subir un archivo y enviarme una reverse shell pero finalmente la solución fue mucho mas simple ya que se encontraba un archivo llamado "archivitotraviesito" el cual tenia lo siguiente: ![archivitotraviesito](./images/sites/imagenes/archivitotraviesito.png)
 
 Por lo que ya tenemos la contraseña del ssh(el mensaje no nos dice el usuario pero como nosotros vimos el "/etc/passwd" y sabemos que hay uno llamado chocolate, pero para confirmar podríamos usar hydra o medusa dependiendo de los gustos). Nos conectamos por ssh con usuario "chocolate" y contraseña "lapasswordmasmolonadelacity" y listo, estamos dentro.
 
@@ -101,4 +101,4 @@ bash
 
 y listo. SOMOS ROOT
 
-![root](../../../maquina-sites/imagenes/root.png)
+![root](./images/sites/imagenes/root.png)

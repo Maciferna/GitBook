@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Medio
 
-![dock](../../../maquina-chmod-4755/img/dock.png)
+![dock](./images/chmod-4755/img/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -290,7 +290,7 @@ el cual "smbuser" probablemente sea del smb y "rabol" de ssh.
 
 Si probamos en conectarnos por ssh veremos este mensaje:
 
-![ssh](../../../maquina-chmod-4755/img/ssh.png)
+![ssh](./images/chmod-4755/img/ssh.png)
 
 Ahora si probamos "fuckit" como la contraseña de "smbuser" podremos entrar al smb:
 
@@ -314,7 +314,7 @@ por lo que luego de probar, vemos que la contraseña de el usuario "rabol" es "s
 
 Si ejecutamos algun comando veremos que tenemos un `rbash`, lo cual es un bash que está restringido y solo nos permite ejecutar ciertos comandos que están permitidos, ya que nos cambia el PATH a uno que tenga esos comandos permitidos y hace que no se pueda cambiar. Hay varias maneras de escapar dependiendo de los binarios que tengamos permitidos, en este caso, al ejecutar `ls` veremos que si funciona (si no estuviera en la carpeta donde tenemos nuestros binarios no funcionaria) y que hay una carpeta bin, la cual es la que tiene los binarios, y si nos fijamos que tiene veremos esto:
 
-![ls](../../../maquina-chmod-4755/img/ls.png)
+![ls](./images/chmod-4755/img/ls.png)
 
 Sabiendo que tenemos python3, es muy sencillo escapar, solamente tenemos que ejecutar esto:
 
@@ -334,7 +334,7 @@ Ahora ya podemos hacer todo normal.
 
 si vemos los binarios SUID veremos lo siguiente:
 
-![suid](../../../maquina-chmod-4755/img/SUID.png)
+![suid](./images/chmod-4755/img/SUID.png)
 
 como vemos está curl, y hay una manera fácil de escalar escribiendo archivos del sistema:
 
@@ -384,6 +384,6 @@ Esto va a borrar la "x" de root.
 
 Ahora solo ejecutamos `su` y ya seremos root:
 
-![root](../../../maquina-chmod-4755/img/root.png)
+![root](./images/chmod-4755/img/root.png)
 
 Gracias por leer.

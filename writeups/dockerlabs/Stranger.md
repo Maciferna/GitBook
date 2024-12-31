@@ -6,7 +6,7 @@ Autor: kaikoperez
 
 Dificultad: Medio
 
-![stranger](../../../maquina-stranger/img/stranger.png)
+![stranger](./images/stranger/img/stranger.png)
 
 ## INTRUSION
 
@@ -47,7 +47,7 @@ Como vemos están abiertos los puertos `21,22,80`, en el cual corren `ftp,ssh,ap
 
 **PUERTO 80:**
 
-![80](../../../maquina-stranger/img/80.png)
+![80](./images/stranger/img/80.png)
 
 Tenemos un posible usuario: "mwheeler"
 
@@ -117,7 +117,7 @@ Finished
 
 Como vemos hay un `secret.html` que si entramos desde el navegador tiene un mensaje:
 
-![secret](../../../maquina-stranger/img/secret.png)
+![secret](./images/stranger/img/secret.png)
 
 sabiendo eso podemos usar hydra al puerto 21 de ftp con el usuario admin y wordlist la rockyou:
 
@@ -125,7 +125,7 @@ sabiendo eso podemos usar hydra al puerto 21 de ftp con el usuario admin y wordl
 hydra -l admin -P /usr/share/wordlists/rockyou.txt ftp://172.17.0.2
 ```
 
-![hydra](../../../maquina-stranger/img/hydra.png)
+![hydra](./images/stranger/img/hydra.png)
 
 Ahora que tenemos un usuario nos conectamos usando `ftp 172.17.0.2` y ponemos el usuario y contraseña.
 
@@ -149,6 +149,6 @@ Si leemos el archivo `/etc/passwd` vemos que también hay un usuario admin como 
 
 Siendo el usuario admin, vemos que usamos sh, entonces para estar más comodos ejecutaremos `bash`. Ahora si ejecutamos `sudo -l` y ponemos la contraseña veremos que podemos ejecutar todo como root, asi que solo ponemos `sudo su` y listo, _somos root_.
 
-![root](../../../maquina-stranger/img/root.png)
+![root](./images/stranger/img/root.png)
 
 Gracias por leer.

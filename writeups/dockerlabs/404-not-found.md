@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Medio
 
-![Dock](../../../maquina_404-not-found/imagenes/dock.png)
+![Dock](./images/404-not-found/imagenes/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -56,7 +56,7 @@ Una vez hecho esto continuaremos por el navegador ya que el escaneo no nos dice 
 
 #### PUERTO 80
 
-![80](../../../maquina_404-not-found/imagenes/80.png)
+![80](./images/404-not-found/imagenes/80.png)
 
 Luego de revisar un rato y usar gobuster no encontré nada mas que una "clave" en `/participar.html`;que realmente era un mensaje en base64 que dice _"Que haces?, mira en la URL."_. Según el mensaje dice que tenemos que mirar la URL, por lo que podriamos intentar buscar _subdominios_ con wfuzz de la siguiente manera:
 
@@ -86,7 +86,7 @@ $IP 404-not-found.hl info.404-not-found.hl
 
 Esto para que podamos entrar desde el navegador.
 
-Una vez que entramos a `info.404-not-found.hl` vemos lo siguiente: ![info](../../../maquina_404-not-found/imagenes/info.png)
+Una vez que entramos a `info.404-not-found.hl` vemos lo siguiente: ![info](./images/404-not-found/imagenes/info.png)
 
 Luego de revisar un poco el codigo fuente, se ve en el final lo siguiente:
 
@@ -96,7 +96,7 @@ Luego de revisar un poco el codigo fuente, se ve en el final lo siguiente:
 
 Por lo que si buscamos `LDAP injection`, podemos probar si alguno de la página funciona(en mi caso me funcionó esta [página](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/LDAP%20Injection/README.md) con `admin*)(uid=*))(|(uid=*`). Una vez probado estaremos dentro y nos da un usuario y contraseña del ssh:
 
-![credenciales](../../../maquina_404-not-found/imagenes/credenciales.png)
+![credenciales](./images/404-not-found/imagenes/credenciales.png)
 
 ## INTRUSION
 
@@ -144,6 +144,6 @@ Nuevamente intentamos ejecutar `sudo -l` pero como no tenemos la contraseña des
 
 Al irnos a nuestra home vemos una flag y un archivo llamado "boss.txt" que dice _"¿Qué es rooteable?"_, podemos intentar usar _"rooteable"_ como contraseña para root, por lo que ejecutamos `su root` y ponemos la contraseña y listo, _ya somos root_.
 
-![root](../../../maquina_404-not-found/imagenes/root.png)
+![root](./images/404-not-found/imagenes/root.png)
 
 Adiós.

@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Difícil
 
-![r00tless](../../../maquina-r00tless/img/r00tless.png)
+![r00tless](./images/r00tless/img/r00tless.png)
 
 ## RECONOCIMIENTO
 
@@ -72,7 +72,7 @@ Sabiendo esto iremos a la web.
 
 **Puerto 80:**
 
-![80](../../../maquina-r00tless/img/80.png)
+![80](./images/r00tless/img/80.png)
 
 Por lo que parece podemos subir archivos, pero antes de ponernos a probar eso mejor hacemos un poco de fuzzing para ver si hay otro archivo.
 
@@ -246,7 +246,7 @@ una vez hecho eso, al ir a el navegador en nuestra máquina atacante y entrar a 
 <!--ultramegatextosecret.txt-->
 ```
 
-Al parecer es un archivo, por lo que podemos pegarlo en la url: ![less](../../../maquina-r00tless/img/less.png)
+Al parecer es un archivo, por lo que podemos pegarlo en la url: ![less](./images/r00tless/img/less.png)
 
 Como vemos es un "cuento" creado por "less", que si recordamos es un usuario de la máquina, por lo que en alguna parte puede estar la contraseña.
 
@@ -264,7 +264,7 @@ cat text | tr ' ' '\n' > pass
 
 si revisamos el nuevo archivo llamado "pass", veremos que todo el texto está separado por palabras, ahora simplemente copiamos el script ".sh" del repositorio y nos creamos uno en la máquina victima, le damos permisos con `chmod +x <nombre>.sh` y luego ponemos `./<nombre>.sh less pass`; luego de esperar un rato veremos este mensaje:
 
-![pass](../../../maquina-r00tless/img/pass.png)
+![pass](./images/r00tless/img/pass.png)
 
 Ahora ejecutamos `su less` y ponemos la contraseña.
 
@@ -290,6 +290,6 @@ root::0:0:root:/root:/bin/bash
 
 guardamos y ahora ejecutamos `su` y listo, ya seremos root.
 
-![root](../../../maquina-r00tless/img/root.png)
+![root](./images/r00tless/img/root.png)
 
 Gracias por leer.

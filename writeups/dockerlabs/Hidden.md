@@ -4,7 +4,7 @@ Autor: [El Pingüino de Mario](https://www.youtube.com/channel/UCGLfzfKRUsV6Bzkr
 
 Dificultad: Medio
 
-![Hidden](/maquina-hidden/img/Dockerlabs.png)
+![Hidden](images/hidden/img/Dockerlabs.png)
 
 # Reconocimiento
 
@@ -90,7 +90,7 @@ Como vemos tenemos un subdominio, por lo que volveremos a editar el `/etc/hosts`
 
 Ahora si vamos desde la web, veremos el siguiente panel de subida de archivos:
 
-![Subir_Archivos](/maquina-hidden/img/Panel.png)
+![Subir_Archivos](images/hidden/img/Panel.png)
 
 # Intrusión
 
@@ -120,7 +120,7 @@ sudo apt install xclip && cat /user/share/wordlist/rockyou.txt | head -n 500 | x
 
 esto lo que hará, sera instalar `xclip` si no lo tenemos, y luego copiar las primeras 500 lineas del rockyou (esa ruta es para kali linux, se debe cambiar en caso que no esté ahi), luego volvemos a la maquina y creamos la wordlist con las contraseñas. Una vez ejecutado el script, veremos lo siguiente:
 
-![Cafetero-pass](/maquina-hidden/img/cafetero.png)
+![Cafetero-pass](images/hidden/img/cafetero.png)
 
 (si no funciona, se debe cambiar la linea del script que dice `if timeout 0.073` por `if timeout 0.1`)
 
@@ -154,7 +154,7 @@ sudo find . -exec /bin/bash \; -quit
 
 ## Root
 
-![Root](/maquina-hidden/img/root.png)
+![Root](images/hidden/img/root.png)
 
 
 

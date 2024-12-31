@@ -6,7 +6,7 @@ Autor: [Lenam](https://len4m.github.io/)
 
 Dificultad: Dificil
 
-![debugme](../../maquina-debugme/img/debug.png)
+![debugme](./images/debugme/img/debug.png)
 
 ## RECONOCIMIENTO
 
@@ -34,7 +34,7 @@ Como vemos, los puertos abiertos son:
 
 **`Puerto 80:`**
 
-![80](../../maquina-debugme/img/80.png)
+![80](./images/debugme/img/80.png)
 
 Ahora hacemos fuzzing para ver si encontramos algun archivo o directorio con algo de información:
 
@@ -71,13 +71,13 @@ Finished
 
 Como vemos tenemos un `info.php`, que al revisarlo encuentro algo que nos puede ayudar:
 
-![info](../../maquina-debugme/img/info.png)
+![info](./images/debugme/img/info.png)
 
 Ahora que tenemos esta información podemos buscar algún exploit para imagick. Para este caso usaremos [este](https://github.com/voidz0r/CVE-2022-44268).
 
 Una vez descargado el exploit haremos lo que dice el propio repositorio y luego de que nos suelte la imagen, la subiremos a la web. Una vez subida y reziseada nos quedará así:
 
-![image](../../maquina-debugme/img/image.png)
+![image](./images/debugme/img/image.png)
 
 Tocamos click derecho en la imagen roja y nos la guardamos, una vez guardada nos movemos a donde la dejamos y utilizaremos `exiftool` para ver los metadatos. Para hacerlo solo ejecutamos esto:
 
@@ -85,7 +85,7 @@ Tocamos click derecho en la imagen roja y nos la guardamos, una vez guardada nos
 exiftool <imagen>.png
 ```
 
-![meta](../../maquina-debugme/img/meta.png)
+![meta](./images/debugme/img/meta.png)
 
 Como vemos hay un montón de números, pero si hacemos lo que decía el repositorio podremos ver correctamente el `passwd`:
 
@@ -131,7 +131,7 @@ Ahora que tenemos un usuario, ejecutaremos hydra para el usuario lenam en el ssh
 hydra -l lenam -P <wordlist> ssh://<ip>
 ```
 
-![hydra](../../maquina-debugme/img/hydra.png)
+![hydra](./images/debugme/img/hydra.png)
 
 Ahora que tenemos una contraseña nos conectamos por ssh. **ya estamos dentro**
 
@@ -179,6 +179,6 @@ exec("process.mainModule.require('child_process').exec('chmod u+s /bin/bash')")
 
 luego salimos y ponemos `bash -p` y **ya seremos root:**
 
-![root](../../maquina-debugme/img/root.png)
+![root](./images/debugme/img/root.png)
 
 Gracias por leer.

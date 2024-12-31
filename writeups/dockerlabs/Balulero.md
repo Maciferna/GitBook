@@ -6,7 +6,7 @@ Autor: [El Pingüino de Mario](https://www.youtube.com/channel/UCGLfzfKRUsV6Bzkr
 
 Dificultad: Fácil
 
-![balulero](../../../maquina-balulero/img/baluleo.png)
+![balulero](./images/balulero/img/baluleo.png)
 
 ## RECONOCIMIENTO
 
@@ -54,11 +54,11 @@ son versiones relativamente nuevas por lo que no podremos hacer mucho con ellas.
 
 Puerto 80:
 
-![80](../../../maquina-balulero/img/80.png)
+![80](./images/balulero/img/80.png)
 
 En el puerto 80 (página web) no encontramos nada útil a simple vista, pero si miramos el codigo fuente, y entramos a el script.js que está en esta parte:
 
-![script](../../../maquina-balulero/img/script.png)
+![script](./images/balulero/img/script.png)
 
 veremos un codigo distinto el cual tiene este comentario:
 
@@ -91,7 +91,7 @@ Al parecer son credenciales para el ssh, por lo que simplemente nos conectamos c
 
 Siendo el usuario balu, veremos que podemos ejecutar `php` como el usuario chocolate al ejecutar `sudo -l`:
 
-![sudo -l](../../../maquina-balulero/img/s-l.png)
+![sudo -l](./images/balulero/img/s-l.png)
 
 por lo que luego de buscar en [GTFOBins](https://gtfobins.github.io/), veo que podemos pivotar a chocolate de la siguiente manera:
 
@@ -104,7 +104,7 @@ sudo -u chocolate php -r "system('$CMD');"
 
 Ahora, no tendremos suerte con el `sudo -l`, pero luego de usar la herramienta [pspy](https://github.com/DominicBreuker/pspy), logro ver que hay un comando que se ejecuta cada 5 segundos:
 
-![pspy](../../../maquina-balulero/img/pspy.png)
+![pspy](./images/balulero/img/pspy.png)
 
 Al parecer, el proceso ejecuta cada cierto tiempo el script que está en `/opt/script.php`, al que casualmente podemos modificar, por lo que ahora solo nos queda ejecutar lo siguiente:
 
@@ -116,6 +116,6 @@ echo "?>" >> /opt/script.php
 
 Una vez ejecutado todo eso, solo nos quedaria esperar unos 5 segundos, y luego ejecutar `bash -p` ya que con el nuevo script que creamos le dimos permisos SUID a bash:
 
-![root](../../../maquina-balulero/img/root.png)
+![root](./images/balulero/img/root.png)
 
 Gracias por leer....

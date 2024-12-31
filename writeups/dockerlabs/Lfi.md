@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Dificil
 
-![docker](../../../maquina-lfi.elf/imagenes/docker.png)
+![docker](./images/lfi.elf/imagenes/docker.png)
 
 ## RECONOCIMIENTO
 
@@ -33,7 +33,7 @@ No se ve nada interesante por lo que continuaremos por el navegador.
 
 #### PUERTO 80:
 
-![80](../../../maquina-lfi.elf/imagenes/80.png)
+![80](./images/lfi.elf/imagenes/80.png)
 
 No tiene nada interesante, ya que al entrar a "Mission Overview" hay varios botones pero ninguno tiene utilidad. Ahora acudiremos a hacer fuzzing con gobuster:
 
@@ -95,7 +95,7 @@ Como vemos nos ha encontrado que el parametro "search" permite un LFI.
 
 Al poner `?search=/etc/passwd` en el "index.php" podemos confirmar que hay un usuario "lin" en el servidor. Normalmente _si el puerto 22 estuviera abierto_ podriamos intentar leer la clave privada de el usuario "lin", pero como en este caso no esta abierto el ssh, por lo que tendremos que probar el [Wrapper php://filter](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md), si esto nos funciona significara que podremos ejecutar comandos en el sistema. Para confirmarlo solo pegamos uno en el parametro "search" y si nos da resultado significa que podremos ejecutar comandos.
 
-![wrapper](../../../maquina-lfi.elf/imagenes/wrapper.png)
+![wrapper](./images/lfi.elf/imagenes/wrapper.png)
 
 Como vemos ha funcionado, entonces ahora podremos ejecutar comandos en el sistema usando el script [php\_fileter\_chain\_generator](https://github.com/synacktiv/php_filter_chain_generator/blob/main/php_filter_chain_generator.py) de la siguiente manera:
 
@@ -105,9 +105,9 @@ python3 php_filter_chain_generator.py --chain "<?php system('ls -la'); ?>"
 
 nos copiamos el resultado y se lo damos al parametro search
 
-![ls](../../../maquina-lfi.elf/imagenes/ls.png)
+![ls](./images/lfi.elf/imagenes/ls.png)
 
-Para verlo asi entramos al codigo fuente y ya podremos ejecutar comandos, el problema es que no nos podemos enviar una reverse shell porque si el comando es muy largo el navegador no lo interpreta: ![long](../../../maquina-lfi.elf/imagenes/long.png)
+Para verlo asi entramos al codigo fuente y ya podremos ejecutar comandos, el problema es que no nos podemos enviar una reverse shell porque si el comando es muy largo el navegador no lo interpreta: ![long](./images/lfi.elf/imagenes/long.png)
 
 ## INTRUSION
 
@@ -253,6 +253,6 @@ chmod u+s /bin/bash
 
 Le damos permisos al script con `chmod +x /tmp/script.sh` y ahora simplemente ejecutamos el script de python elijiendo la opcion 3. Luego de hacer todo esto ejecutamos `bash -p` y listo, _somos root_.
 
-![root](../../../maquina-lfi.elf/imagenes/root.png)
+![root](./images/lfi.elf/imagenes/root.png)
 
 Gracias por leer.

@@ -4,7 +4,7 @@ Autor: [Scuffito y Jul3n-dot](https://github.com/jul3n-dot)
 
 Dificultad: Fácil
 
-![Dockerlabs](../../maquina-file/img/Dockerlabs.png)
+![Dockerlabs](./images/file/img/Dockerlabs.png)
 
 # Reconocimiento
 
@@ -143,6 +143,6 @@ Una vez todo listo, ejecutamos `sudo python3 /home/iker/geo_ip.py ` y ya seremos
 
 ## Root
 
-![root](/maquina-file/img/root.png)
+![root](./images/file/img/root.png)
 
 Gracias por leer :)

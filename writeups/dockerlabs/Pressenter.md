@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Fácil
 
-![dock](../../../maquina-pressenter/imagenes/dock.png)
+![dock](./images/pressenter/imagenes/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -41,7 +41,7 @@ Ahora continuaremos desde el navegador para ver que hay en el puerto 80:
 
 **PUERTO 80:**
 
-![80](../../../maquina-pressenter/imagenes/80.png)
+![80](./images/pressenter/imagenes/80.png)
 
 Al parecer es una página con un "challenge" y que nos podemos registrar, pero si probamos vemos que realmente no podemos, por lo que ignoraremos todo y mejor usaremos gobuster:
 
@@ -77,7 +77,7 @@ Finished
 
 Como vemos no hay nada interesante, pero luego de revisar el codigo fuente de `index.html`, vemos la siguiente línea:
 
-![dominio](../../../maquina-pressenter/imagenes/dominio.png)
+![dominio](./images/pressenter/imagenes/dominio.png)
 
 como se ve en la imágen, hay un dominio `pressenter.hl`, por lo que simplemente modificaremos el archivo `/etc/hosts` y al final agregamos lo siguiente:
 
@@ -214,11 +214,11 @@ Una vez dentro, hay muchas maneras de ganar intrusion remota, pero esta vez crea
 
 Ahora iremos a `plugins > añadir nuevo plugin` y agregaremos uno llamado `file-manager`, a mi me gusta este en específico pero pueden usar el que quieran:
 
-![manager](../../../maquina-pressenter/imagenes/manager.png)
+![manager](./images/pressenter/imagenes/manager.png)
 
 luego lo activamos y vemos que ahora hay una nueva pestaña, entramos y vamos a `/wp-content/uploads/2024` y creamos un archivo llamado "cmd.php" o lo que queramos y dentro ponemos lo siguiente:
 
-![cmd](../../../maquina-pressenter/imagenes/cmd.png)
+![cmd](./images/pressenter/imagenes/cmd.png)
 
 guardamos y entramos a `http://pressenter.hl/wp-content/uploads/2024/cmd.php`. Estando en el archivo ponemos un signo de interrogación con el parametro cmd y el comando que queramos, seria algo así:
 
@@ -341,4 +341,4 @@ Ahora solo ejecutamos `su enter` y ponemos la contraseña, ya habremos escalado 
 
 Luego de buscar, descubro que no hay nada, pero por probar uso la misma contraseña que enter y escalo a root, simplemente hay que ejecutar `su root` y poner la contraseña.
 
-![root](../../../maquina-pressenter/imagenes/root.png)
+![root](./images/pressenter/imagenes/root.png)

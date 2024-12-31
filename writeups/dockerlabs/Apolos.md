@@ -6,7 +6,7 @@ Autor: [Luisillo\_o](https://www.youtube.com/@Luisillo_o)
 
 Dificultad: Medio
 
-![apolos](../../maquina-apolos/img/apolos.png)
+![apolos](./images/apolos/img/apolos.png)
 
 ## RECONOCIMIENTO
 
@@ -39,7 +39,7 @@ Solo está abierto el puerto 80 y corre apache httpd.
 
 **Puerto 80:**
 
-![80](../../maquina-apolos/img/apple.png)
+![80](./images/apolos/img/apple.png)
 
 Parece ser una página en la que podemos comprar.
 
@@ -83,13 +83,13 @@ Finished
 
 Podemos registrarnos, por lo que simplemente nos creamos una cuenta y listo. Una vez registrados veremos esto:
 
-![reg](../../maquina-apolos/img/reg.png)
+![reg](./images/apolos/img/reg.png)
 
-Si tocamos el boton de comprar ahora veremos una página en la que podemos comprar, pero lo que nos interesa es lo de buscar productos: ![buscar](../../maquina-apolos/img/buscar.png)
+Si tocamos el boton de comprar ahora veremos una página en la que podemos comprar, pero lo que nos interesa es lo de buscar productos: ![buscar](./images/apolos/img/buscar.png)
 
 este nos interesa porque funciona bien, pero si probamos en poner una inyección sql como `or 1=1-- -`, veremos que nos muestra los productos:
 
-![sql](../../maquina-apolos/img/sql.png)
+![sql](./images/apolos/img/sql.png)
 
 Esto porque se ve que realiza una petición a la base de datos de manera insegura y 1 siempre es igual a 1, por lo que nos muestra los productos. Ahora que sabemos esto podemos usar `sqlmap`, para intentar leer la base de datos.
 
@@ -97,7 +97,7 @@ Esto porque se ve que realiza una petición a la base de datos de manera insegur
 
 Para usar sqlmap utilizaremos la request, por lo que abriremos el burpsuite, y capturaremos la petición al buscar un producto:
 
-![burp](../../maquina-apolos/img/burp.png)
+![burp](./images/apolos/img/burp.png)
 
 La copiamos y la metemos en un archivo llamado request. Una vez hecho eso ejecutaremos sqlmap de la siguiente manera:
 
@@ -128,7 +128,7 @@ Ahora tenemos la contraseña de admin: 0844575632
 
 Ahora que tenemos el usuario y contraseña del usuario admin, iniciamos sesión y vamos a donde dice "Sección de Administración", entramos y tendremos un panel en el que podemos subir archivos al ir a "configuracion":
 
-![admin](../../maquina-apolos/img/ad.png)
+![admin](./images/apolos/img/ad.png)
 
 Ahora subiremos un ".php" con el siguiente contenido:
 
@@ -140,7 +140,7 @@ Ahora subiremos un ".php" con el siguiente contenido:
 
 El problema es que al intentar subir un ".php" nos dice que no se pueden subir, por lo que buscaremos como bypasearlo para que lo suba igual. [HackTricks](https://book.hacktricks.xyz/pentesting-web/file-upload):
 
-![tricks](../../maquina-apolos/img/tricks.png)
+![tricks](./images/apolos/img/tricks.png)
 
 Como vemos hay muchas formas, en mi caso me funcionó ".phtml", ahora vamos a `/uploads/` y ya veremos el archivo. Ahora solo nos queda escuchar con netcat en el puerto 443 y enviar esto desde el navegador:
 
@@ -182,6 +182,6 @@ https://www.mohammedalani.com/tutorials/cracking-a-shadow-password-using-john-th
 
 Una vez hecho todo tal cual como sale en la página, habremos escalado a root con la contraseña "rainbow2":
 
-![root](../../maquina-apolos/img/root.png)
+![root](./images/apolos/img/root.png)
 
 Gracias por leer.

@@ -4,7 +4,7 @@ Autor: [4bytes](https://github.com/4bytess/)
 
 Dificultad: Medio
 
-![Stack](/maquina-stack/img/stack.png)
+![Stack](images/stack/img/stack.png)
 
 # Reconocimiento
 

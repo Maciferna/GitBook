@@ -6,7 +6,7 @@ Autor: [d1se0](https://github.com/D1se0)
 
 Dificultad: Medio
 
-![dockerlabs](../../../maquina-inj3ct0rss/imagenes/dockerlabs.png)
+![dockerlabs](./images/inj3ct0rss/imagenes/dockerlabs.png)
 
 ## INTRUSION
 
@@ -14,7 +14,7 @@ Comenzamos entrando por el navegador a la ip `172.17.0.2`
 
 **PUERTO 80:**
 
-![80](../../../maquina-inj3ct0rss/imagenes/80.png)
+![80](./images/inj3ct0rss/imagenes/80.png)
 
 Al parecer es una web para practicar hacking, de todo lo que dice, lo interesante es "Desafíos de SQL Injection", ya que hay un panel de login.
 
@@ -106,6 +106,6 @@ sudo cat "$LFILE"
 
 Esto nos dará la clave privada del ssh del usuario root, ahora nos la guardaremos en nuestra maquina local como `id_rsa` y le damos permisos con `chmod 600`, luego ponemos `ssh -i id_rsa root@172.17.0.2` y listo, somos root.
 
-![root](../../../maquina-inj3ct0rss/imagenes/root.png)
+![root](./images/inj3ct0rss/imagenes/root.png)
 
 Esta maquina tiene flags. Chau....

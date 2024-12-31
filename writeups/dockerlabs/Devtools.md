@@ -6,7 +6,7 @@ Dificultad: Medio
 
 
 
-![DevTools](/maquina-devtools/img/dockerlabs.png)
+![DevTools](./images/devtools/img/dockerlabs.png)
 
 
 
@@ -60,7 +60,7 @@ Si vamos a la web, nos saltará un cuadro que nos pide iniciar sesión, pero nos
 
 Viendo esto, puede ser que el archivo se intente ocultar ya que su nombre es "backup" pero con dos "p", por lo que si lo revisamos, veremos que nos da las credenciales:
 
-![Credenciales](/maquina-devtools/img/credenciales.png)
+![Credenciales](./images/devtools/img/credenciales.png)
 
 si probamos las credenciales en la web nos funcionan correctamente, pero no para entrar por ssh, pero si revisamos el comentario:
 
@@ -82,7 +82,7 @@ hydra -L /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt -p balu
 
 
 
-![Carlos-pass](/maquina-devtools/img/hydra.png)
+![Carlos-pass](./images/devtools/img/hydra.png)
 
 Ya tenemos credenciales, por lo que continuaremos conectándonos por ssh.
 
@@ -100,6 +100,6 @@ Por lo que una vez ejecutado eso, ejecutamos `su` y escalamos a root.
 
 ## Root
 
-![Root](/maquina-devtools/img/root.png)
+![Root](./images/devtools/img/root.png)
 
 Gracias por leer :)

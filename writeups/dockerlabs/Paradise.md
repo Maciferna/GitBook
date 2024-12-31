@@ -6,7 +6,7 @@ Autor: [kaikoperez](https://kiket25.github.io/HackStry/)
 
 DIficultad: Fácil
 
-![dock](../../../maquina-paradise/img/dock.png)
+![dock](./images/paradise/img/dock.png)
 
 ## RECONOCIMIENTO
 
@@ -88,7 +88,7 @@ Los puertos abiertos son:
 
 **Puerto 80:**
 
-![80](../../../maquina-paradise/img/80.png)
+![80](./images/paradise/img/80.png)
 
 No es una página con algo muy interesante, ya que no tiene algo que podamos explotar. Ahora si vamos a `/galery.html` y miramos el código fuente, podremos ver en el final **un mensaje en base64**, por lo que si lo transformamos a texto plano ejecutando `echo "XXXXXXXX" | base64 -d`, veremos que dice "estoesunsecreto". Luego de probar, descubro que es un directorio en la página. Dentro del mismo, tenemos una nota que dice lo siguiente:
 
@@ -106,7 +106,7 @@ Ahora usaremos `hydra` para obtener la contraseña de "lucas":
 hydra -l lucas -P <wordlist> ssh://<ip>
 ```
 
-![hydra](../../../maquina-paradise/img/hydra.png)
+![hydra](./images/paradise/img/hydra.png)
 
 Ahora ya tenemos credenciales: `lucas:chocolate`.
 
@@ -164,4 +164,4 @@ echo "lucas ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 Una vez hecho eso, ejecutamos `su` como lucas y seremos root:
 
-![root](../../../maquina-paradise/img/root.png)
+![root](./images/paradise/img/root.png)
