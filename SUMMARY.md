@@ -11,6 +11,7 @@
   * [Anonymouspingu](writeups/dockerlabs/Anonymouspingu.md)
   * [Apolos](writeups/dockerlabs/Apolos.md)
   * [Backend](writeups/dockerlabs/Backend.md)
+  * [BadPlugin](writeups/dockerlabs/BadPlugin.md)
   * [Balulero](writeups/dockerlabs/Balulero.md)
   * [Borazuwarahctf](writeups/dockerlabs/Borazuwarahctf.md)
   * [Bruteshock](writeups/dockerlabs/Bruteshock.md)
