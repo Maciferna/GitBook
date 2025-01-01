@@ -596,7 +596,7 @@ echo "y" | /bin/rm ~/.bashrc && echo '#!/bin/bash' > ~/.bashrc && echo 'export P
 
 luego reiniciamos la shell y ya estaríamos de manera relativamente cómoda. Si nos fijamos en la home, existe un binario llamado "Olympus". Si a este lo revisamos con `strings` veremos que al parecer ejecuta otro binario en `/home/darksblack/.zprofile/OlympusValidator`, este lo pasamos a nuestra máquina local con `python3 -m http.server 9090` y lo descargamos.
 
-## Ingenieria inversa
+#### Ingenieria inversa
 
 Para esto necesitaremos `ghidra` en el cual importaremos el archivo, luego de revisarlo un poco, veo que el serial que espera es el siguiente:
 
