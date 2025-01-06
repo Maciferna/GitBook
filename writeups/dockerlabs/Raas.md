@@ -1,3 +1,6 @@
 Máquina **Raas** de [DockerLabs](https://dockerlabs.es)
 
-Autor: 
+Autor: [darksblack](https://github.com/DarksBlackSk)
+
+Dificultad: Dificil
+
