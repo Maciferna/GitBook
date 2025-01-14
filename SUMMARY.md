@@ -63,3 +63,5 @@
   * [Vulnerame](writeups/dockerlabs/Vulnerame.md)
   * [Wallet](writeups/dockerlabs/Wallet.md)
   * [Winterfell](writeups/dockerlabs/Winterfell.md)
+* [🔶 The Hackers Labs](writeups/thl/README.md)
+  * [Casa Paco](writeups/thl/Casa-Paco.md)
