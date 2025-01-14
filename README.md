@@ -15,7 +15,7 @@ En este espacio encontrarás:
 
 Acepto cualquier crítica o comentario. Si algo te parece bien o mal, o tienes alguna sugerencia, soy todo oídos.
 
-#### Contacto
+#### Redes
 
 Mis redes sociales:
 

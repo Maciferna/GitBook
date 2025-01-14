@@ -1,5 +1,5 @@
 ---
-description: Writeups de [The Hackers Labs](https://thehackerslabs.com/)
+description: Writeups de The Hackers Labs
 ---
 
 # 🔶 The Hackers Labs
