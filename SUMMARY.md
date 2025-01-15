@@ -42,6 +42,7 @@
   * [Master](writeups/dockerlabs/Master.md)
   * [Mirame](writeups/dockerlabs/Mirame.md)
   * [Paradise](writeups/dockerlabs/Paradise.md)
+  * [Patria Querida](writeups/dockerlabs/PatriaQuerida.md)
   * [PingPong](writeups/dockerlabs/PingPong.md)
   * [Pntopntobarra](writeups/dockerlabs/Pntopntobarra.md)
   * [Pressenter](writeups/dockerlabs/Pressenter.md)
