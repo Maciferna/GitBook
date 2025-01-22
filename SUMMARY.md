@@ -68,3 +68,4 @@
   * [Casa Paco](writeups/thl/Casa-Paco.md)
 * [🪯 HackMyVM](writeups/hackmyvm/README.txt)
 * [🪯 BugBountyLabs](writeups/bblabs/README.txt)
+  * [Corsy](writeups/bblabs/corsy.md)
