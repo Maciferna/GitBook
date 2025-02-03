@@ -39,6 +39,7 @@
   * [Insanity](writeups/dockerlabs/Insanity.md)
   * [Jenkhack](writeups/dockerlabs/Jenkhack.md)
   * [Lfi.elf](writeups/dockerlabs/Lfi.elf.md)
+  * [Life Or Dead](writeups/dockerlabs/Lifeordead.md)
   * [Mapache2](writeups/dockerlabs/Mapache2.md)
   * [Master](writeups/dockerlabs/Master.md)
   * [Mirame](writeups/dockerlabs/Mirame.md)
