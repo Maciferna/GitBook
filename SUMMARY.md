@@ -70,5 +70,6 @@
 * [🔶 The Hackers Labs](writeups/thl/README.md)
   * [Casa Paco](writeups/thl/Casa-Paco.md)
 * [🪯 HackMyVM](writeups/hackmyvm/README.txt)
+  * [Hero](writeups/hackmyvm/Hero.md)
 * [🪯 BugBountyLabs](writeups/bblabs/README.txt)
   * [Corsy](writeups/bblabs/corsy.md)
