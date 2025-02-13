@@ -71,5 +71,6 @@
   * [Casa Paco](writeups/thl/Casa-Paco.md)
 * [🪯 HackMyVM](writeups/hackmyvm/README.txt)
   * [Hero](writeups/hackmyvm/Hero.md)
+  * [MagiFi](writeups/hackmyvm/MagiFi.md)
 * [🪯 BugBountyLabs](writeups/bblabs/README.txt)
   * [Corsy](writeups/bblabs/corsy.md)
