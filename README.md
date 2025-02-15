@@ -20,7 +20,6 @@ Acepto cualquier crítica o comentario. Si algo te parece bien o mal, o tienes a
 Mis redes sociales:
 
 * **YouTube**: [maciferna](https://youtube.com/@maciferna)
-* **Instagram**: [macim0\_](https://instagram.com/macim0_)
 * **GitHub**: [maciferna](https://github.com/maciferna)
 
 Gracias por pasarte por aquí.
