@@ -16,6 +16,7 @@
   * [Balulero](writeups/dockerlabs/Balulero.md)
   * [Borazuwarahctf](writeups/dockerlabs/Borazuwarahctf.md)
   * [Bruteshock](writeups/dockerlabs/Bruteshock.md)
+  * [Buffered](writeups/dockerlabs/Buffered.md)
   * [Candy](writeups/dockerlabs/Candy.md)
   * [Chmod-4755](writeups/dockerlabs/Chmod-4755.md)
   * [Corruptress](writeups/dockerlabs/Corruptress.md)
