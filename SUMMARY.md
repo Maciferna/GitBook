@@ -58,6 +58,7 @@
   * [Sender](writeups/dockerlabs/Sender.md)
   * [Showtime](writeups/dockerlabs/Showtime.md)
   * [Sites](writeups/dockerlabs/Sites.md)
+  * [Smashing](writeups/dockerlabs/Smashing.md)
   * [Spain](writeups/dockerlabs/Spain.md)
   * [Stack](writeups/dockerlabs/Stack.md)
   * [Stellarjwt](writeups/dockerlabs/Stellarjwt.md)
