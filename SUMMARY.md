@@ -43,6 +43,7 @@
   * [Life Or Dead](writeups/dockerlabs/Lifeordead.md)
   * [Mapache2](writeups/dockerlabs/Mapache2.md)
   * [Master](writeups/dockerlabs/Master.md)
+  * [Machupichu](writeups/dockerlabs/Machupichu.md)
   * [Mirame](writeups/dockerlabs/Mirame.md)
   * [Paradise](writeups/dockerlabs/Paradise.md)
   * [Patria Querida](writeups/dockerlabs/PatriaQuerida.md)
