@@ -33,6 +33,7 @@
   * [Findyourstyle](writeups/dockerlabs/Findyourstyle.md)
   * [Flow](writeups/dockerlabs/Flow.md)
   * [Forgotten\_Portal](writeups/dockerlabs/Forgotten_portal.md)
+  * [Gallery](writeups/dockerlabs/Gallery.md)
   * [Hackmedaddy](writeups/dockerlabs/Hackmedaddy.md)
   * [Hidden](writeups/dockerlabs/Hidden.md)
   * [Inj3ct0rss](writeups/dockerlabs/Inj3ct0rss.md)
