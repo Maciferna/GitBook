@@ -73,6 +73,7 @@
   * [Winterfell](writeups/dockerlabs/Winterfell.md)
 * [🔶 The Hackers Labs](writeups/thl/README.md)
   * [Casa Paco](writeups/thl/Casa-Paco.md)
+  * [Shadow Gate](writeups/thl/ShadowGate.md)
   * [Token Of Hate](writeups/thl/Token-of-hate.md)
 * [🪯 HackMyVM](writeups/hackmyvm/README.txt)
   * [Hero](writeups/hackmyvm/Hero.md)
