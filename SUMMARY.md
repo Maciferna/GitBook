@@ -66,6 +66,7 @@
   * [Stellarjwt](writeups/dockerlabs/Stellarjwt.md)
   * [Stranger](writeups/dockerlabs/Stranger.md)
   * [SubVersion](writeups/dockerlabs/SubVersion.md)
+  * [The Dog](writeups/dockerlabs/TheDog.md)
   * [UserSearch](writeups/dockerlabs/UserSearch.md)
   * [Vulnvault](writeups/dockerlabs/Vulnvault.md)
   * [Vulnerame](writeups/dockerlabs/Vulnerame.md)
